@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
     return (
         <>
             <Head>
-                <title>Confetti Tailwind Next Template</title>
+                <title>Methora Theme</title>
             </Head>
             <ThemeProvider attribute="class">
                 <Component {...pageProps} />

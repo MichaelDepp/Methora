@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 const Index = () => (
     <>
         <Head>
-            <title>Next Js, Tailwind Css Boilerplate - Confetti Themes</title>
+            <title>Methora Portfolio Theme - Confetti Themes</title>
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <Home />
