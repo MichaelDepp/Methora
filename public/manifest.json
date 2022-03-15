@@ -1,0 +1,12 @@
+{
+    "short_name": "confetti-tailwind-next-boiler",
+    "name": "Tailwind Css Next Js Boiler-plate",
+    "lang": "en",
+    "start_url": "/",
+    "background_color": "#FFFFFF",
+    "theme_color": "#FFFFFF",
+    "dir": "ltr",
+    "display": "standalone",
+    "orientation": "portrait",
+    "prefer_related_applications": false
+}
