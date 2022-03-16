@@ -46,15 +46,11 @@ module.exports = {
                     '56%': { borderRadius: '61% 39% 67% 33% / 70% 50% 50% 30%' },
                     '70%': { borderRadius: '50% 50% 34% 66% / 56% 68% 32% 44%' },
                     '84%': { borderRadius: '46% 54% 50% 50% / 35% 61% 39% 65%' }
-                },
-                movement: {
-                    '0%, 100%': { transform: 'none' },
-                    '50%': { transform: 'translateY(5%) rotateY(10deg)' }
                 }
             },
             // The combinations of the keyframes will be used here
             animation: {
-                blob: 'transform 20s ease-in-out infinite both alternate, movement 40s ease-in-out infinite both'
+                blob: 'transform 20s ease-in-out infinite both alternate'
             },
             colors: {
                 theme: {
