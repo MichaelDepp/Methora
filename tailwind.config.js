@@ -20,7 +20,11 @@ module.exports = {
             '3xl': '1.875rem',
             '4xl': '2.25rem',
             '5xl': '3rem',
-            '6xl': '4rem'
+            '6xl': '3.75rem',
+            '7xl': '5rem',
+            '8xl': '6rem',
+            '9xl': '7rem',
+            '10xl': '8rem'
         },
         screens: {
             sm: '640px',
@@ -63,7 +67,7 @@ module.exports = {
             colors: {
                 theme: {
                     primary: '#F5A8FA',
-                    secondary: '#191919',
+                    secondary: '#262626',
                     bg: '#101010',
                     lightBg: '#fefefe'
                 },
