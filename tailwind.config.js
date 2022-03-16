@@ -47,6 +47,10 @@ module.exports = {
                     '70%': { borderRadius: '50% 50% 34% 66% / 56% 68% 32% 44%' },
                     '84%': { borderRadius: '46% 54% 50% 50% / 35% 61% 39% 65%' }
                 },
+                bounce: {
+                    '0%, 100%': { transform: 'none' },
+                    '50%': { transform: 'translateY(5%)' }
+                },
                 wiggle: {
                     '0%, 100%': { transform: 'rotate(-3deg)' },
                     '50%': { transform: 'rotate(3deg)' }
@@ -54,7 +58,7 @@ module.exports = {
             },
             // The combinations of the keyframes will be used here
             animation: {
-                blob: 'transform 20s ease-in-out infinite both alternate, wiggle 20s ease-in-out infinite'
+                blob: 'transform 20s ease-in-out infinite both alternate, bounce 10s infinite both alternate'
             },
             colors: {
                 theme: {
