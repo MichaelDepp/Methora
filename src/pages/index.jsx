@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Home from '../screens/Home';
+import Skills from '../screens/Skills';
 import HeaderBar from '../components/HeaderBar';
 import Footer from '../components/Footer';
 
@@ -11,6 +12,7 @@ const Index = () => (
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <Home />
+        <Skills />
         <HeaderBar />
         {/* <Footer /> */}
     </>
