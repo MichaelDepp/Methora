@@ -58,7 +58,7 @@ module.exports = {
             },
             // The combinations of the keyframes will be used here
             animation: {
-                blob: 'transform 20s ease-in-out infinite both alternate, bounce 10s infinite both alternate'
+                blob: 'transform 20s ease-in-out infinite both alternate, bounce 10s infinite both alternate, wiggle 20s ease-in-out infinite'
             },
             colors: {
                 theme: {
