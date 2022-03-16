@@ -36,6 +36,26 @@ module.exports = {
             // => @media (min-width: 1280px) { ... }
         },
         extend: {
+            // This keyframe for the animation of the blob
+            keyframes: {
+                transform: {
+                    '0%, 100%': { borderRadius: '63% 37% 54% 46% / 55% 48% 52% 45%' },
+                    '14%': { borderRadius: '40% 60% 54% 46% / 49% 60% 40% 51%' },
+                    '28%': { borderRadius: '54% 46% 38% 62% / 49% 70% 30% 51%' },
+                    '42%': { borderRadius: '61% 39% 55% 45% / 61% 38% 62% 39%' },
+                    '56%': { borderRadius: '61% 39% 67% 33% / 70% 50% 50% 30%' },
+                    '70%': { borderRadius: '50% 50% 34% 66% / 56% 68% 32% 44%' },
+                    '84%': { borderRadius: '46% 54% 50% 50% / 35% 61% 39% 65%' }
+                },
+                movement: {
+                    '0%, 100%': { transform: 'none' },
+                    '50%': { transform: 'translateY(5%) rotateY(10deg)' }
+                }
+            },
+            // The combinations of the keyframes will be used here
+            animation: {
+                blob: 'transform 20s ease-in-out infinite both alternate, movement 40s ease-in-out infinite both'
+            },
             colors: {
                 theme: {
                     primary: '#F5A8FA',
