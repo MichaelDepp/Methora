@@ -12,7 +12,7 @@ const Index = () => (
         </Head>
         <Home />
         <HeaderBar />
-        <Footer />
+        {/* <Footer /> */}
     </>
 );
 
