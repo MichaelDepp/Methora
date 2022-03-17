@@ -66,9 +66,9 @@ module.exports = {
             },
             colors: {
                 theme: {
-                    primary: '#F5A8FA',
+                    primary: '#835ecf',
                     secondary: '#262626',
-                    bg: '#101010',
+                    bg: '#1F1F1F',
                     lightBg: '#fefefe'
                 },
                 gray: {
