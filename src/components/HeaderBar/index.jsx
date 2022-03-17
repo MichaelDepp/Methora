@@ -4,6 +4,7 @@ import { useTheme } from 'next-themes';
 import Hamburger from 'hamburger-react';
 import { RiMoonFill, RiSunFill } from 'react-icons/ri';
 import Drawer from '../Drawer';
+import constants from '../../constants';
 
 const HeaderBar = () => {
     const [isOpen, setOpen] = useState(false);
@@ -14,7 +15,12 @@ const HeaderBar = () => {
     return (
         <>
             <div className="fixed z-50 top-0 w-full flex items-center justify-between flex-wrap">
-                <Hamburger color="#F5A8FA" size={20} toggled={isOpen} toggle={setOpen} />
+                <Hamburger
+                    color={constants.colors.theme.primary}
+                    size={20}
+                    toggled={isOpen}
+                    toggle={setOpen}
+                />
                 <div className="px-2">
                     {theme === 'light' ? (
                         <RiMoonFill
