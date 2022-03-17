@@ -14,7 +14,7 @@ const Skills = () => {
                 <ProfileBlob image={'./assets/memoji-skills.webp'} />
             </div>
             <div className="grid justify-items-center mt-4">
-                <ProgressBar skillName={'Flutter'} percentage={100} />
+                <ProgressBar skillName={'Flutter'} percentage={95} />
                 <ProgressBar skillName={'React Native'} percentage={90} />
                 <ProgressBar skillName={'Machine Learning'} percentage={45} />
                 <ProgressBar skillName={'Python'} percentage={85} />
