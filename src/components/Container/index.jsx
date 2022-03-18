@@ -1,9 +1,18 @@
 import React from 'react';
 
-const Container = (props) => (
-    <div className="px-8 bg-theme-lightBg dark:bg-theme-bg h-screen w-full font-display">
-        {props.children}
-    </div>
-);
+const Container = ({ children, fullScreen }) => {
+    return (
+        <div
+            className={`px-8 bg-theme-lightBg dark:bg-theme-bg ${
+                fullScreen ? 'h-screen' : ''
+            } w-full`}>
+            {children}
+        </div>
+    );
+};
+
+Container.defaultProps = {
+    fullScreen: true
+};
 
 export default Container;
