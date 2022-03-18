@@ -66,7 +66,11 @@ module.exports = {
             animation: {
                 blob: 'transform 20s ease-in-out infinite both alternate, bounce 10s infinite both alternate, wiggle 20s ease-in-out infinite'
             },
-            colors: constants.colors
+            colors: constants.colors,
+            height: {
+                112: '28rem',
+                128: '32rem'
+            }
         }
     },
     plugins: []
