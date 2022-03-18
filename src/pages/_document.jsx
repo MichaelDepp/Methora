@@ -11,7 +11,7 @@ export default class Document extends NextDocument {
                     <link rel="manifest" href="/manifest.json" />
                     <meta name="description" content="Methora Theme" />
                 </Head>
-                <body>
+                <body className="font-display">
                     <Main />
                     <NextScript />
                 </body>
