@@ -6,7 +6,7 @@ const LinkPage = ({ page, onClick }) => {
         <Link href={`#${page.toLowerCase()}`}>
             <h1
                 onClick={onClick}
-                className="text-center text-2xl text-theme-primary font-black cursor-pointer">
+                className="text-center text-4xl text-theme-primary font-black cursor-pointer hover:text-5xl">
                 {page}
             </h1>
         </Link>
