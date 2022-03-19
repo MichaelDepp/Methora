@@ -4,16 +4,16 @@ import HeaderTitle from '../../components/HeaderTitle';
 import PortfolioCard from '../../components/PortfolioCard';
 import PortfolioChip from '../../components/PortfolioChip';
 
-const Portfolio = (props) => {
+const Portfolio = () => {
     return (
-        <Container id={props.id} fullScreen={false}>
+        <Container id="portfolio" fullScreen={false}>
             <div className="pt-8">
                 <HeaderTitle title={'Portfolio'} />
             </div>
             <div className="pt-20">
                 <PortfolioChip />
             </div>
-            <div className="py-12 justify-items-center grid grid-rows-1 gap-4">
+            <div className="py-12 justify-items-center grid grid-rows-1 gap-4 lg:grid-cols-3 lg:gap-8 lg">
                 <PortfolioCard
                     imageSrc={
                         'https://cdn.dribbble.com/userupload/1808226/file/original-43fd0dc66317c79c4a827d41e2478a72.png'

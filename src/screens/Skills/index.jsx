@@ -4,9 +4,9 @@ import Container from '../../components/Container';
 import HeaderTitle from '../../components/HeaderTitle';
 import ProgressBar from '../../components/ProgressBar';
 
-const Skills = (props) => {
+const Skills = () => {
     return (
-        <Container id={props.id}>
+        <Container id="skills">
             <div className="pt-8">
                 <HeaderTitle title={'Skills'} />
             </div>

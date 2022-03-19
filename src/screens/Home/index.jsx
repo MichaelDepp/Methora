@@ -4,9 +4,9 @@ import Container from '../../components/Container';
 import ProfileBlob from '../../components/ProfileBlob';
 import SocialLinks from '../../components/SocialLinks';
 
-const Home = (props) => {
+const Home = () => {
     return (
-        <Container id={props.id}>
+        <Container id="home">
             <div className="pt-28 lg:pt-80 flex justify-center">
                 <ProfileBlob image={'./assets/memoji-home.png'} />
             </div>
