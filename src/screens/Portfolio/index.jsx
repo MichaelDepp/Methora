@@ -1,5 +1,4 @@
 import React from 'react';
-import ProfileBlob from 'components/ProfileBlob';
 import Container from '../../components/Container';
 import HeaderTitle from '../../components/HeaderTitle';
 import PortfolioCard from '../../components/PortfolioCard';
