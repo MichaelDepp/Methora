@@ -44,8 +44,9 @@ const HeaderBar = () => {
             <Drawer isOpen={isOpen} setIsOpen={setOpen}>
                 <div className="grid grid-flow-row gap-4">
                     <LinkPage page={'Home'} onClick={closeBar} />
-                    <LinkPage page={'Portfolio'} onClick={closeBar} />
                     <LinkPage page={'Skills'} onClick={closeBar} />
+                    <LinkPage page={'Portfolio'} onClick={closeBar} />
+                    <LinkPage page={'Blog'} onClick={closeBar} />
                     <LinkPage page={'Contact'} onClick={closeBar} />
                 </div>
             </Drawer>
