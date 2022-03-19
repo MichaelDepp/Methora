@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Blog from '../screens/Blog';
+import Contact from '../screens/Contact';
 import Home from '../screens/Home';
 import Skills from '../screens/Skills';
 import Portfolio from '../screens/Portfolio';
@@ -17,6 +18,7 @@ const Index = () => (
         <Skills />
         <Portfolio />
         <Blog />
+        <Contact />
         <HeaderBar />
         {/* <Footer /> */}
     </>
