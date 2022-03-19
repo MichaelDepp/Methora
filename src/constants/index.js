@@ -4,7 +4,8 @@ module.exports = {
             primary: '#835ecf',
             secondary: '#262626',
             bg: '#1F1F1F',
-            lightBg: '#fefefe'
+            lightBg: '#fefefe',
+            dark: '#191919'
         },
         gray: {
             100: '#f7fafc',
