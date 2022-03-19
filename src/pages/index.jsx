@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Blog from '../screens/Blog';
 import Home from '../screens/Home';
 import Skills from '../screens/Skills';
 import Portfolio from '../screens/Portfolio';
@@ -12,9 +13,10 @@ const Index = () => (
             <title>Methora Portfolio Theme - Confetti Themes</title>
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Home id="home" />
-        <Skills id="skills" />
-        <Portfolio id="portfolio" />
+        <Home />
+        <Skills />
+        <Portfolio />
+        <Blog />
         <HeaderBar />
         {/* <Footer /> */}
     </>
