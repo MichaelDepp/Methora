@@ -12,9 +12,9 @@ const Index = () => (
             <title>Methora Portfolio Theme - Confetti Themes</title>
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Home />
-        <Skills />
-        <Portfolio />
+        <Home id="home" />
+        <Skills id="skills" />
+        <Portfolio id="portfolio" />
         <HeaderBar />
         {/* <Footer /> */}
     </>
