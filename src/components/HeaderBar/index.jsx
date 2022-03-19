@@ -6,11 +6,15 @@ import { RiMoonFill, RiSunFill } from 'react-icons/ri';
 import Drawer from '../Drawer';
 import constants from '../../constants';
 
+import LinkPage from '../LinkPage';
+
 const HeaderBar = () => {
     const [isOpen, setOpen] = useState(false);
     const { theme, setTheme } = useTheme();
 
     const onSwitchTheme = (mode) => setTheme(mode);
+
+    const closeBar = () => setOpen(false);
 
     return (
         <>
@@ -38,19 +42,11 @@ const HeaderBar = () => {
                 </div>
             </div>
             <Drawer isOpen={isOpen} setIsOpen={setOpen}>
-                <div>
-                    <h1 className="p-4 text-center text-2xl text-theme-primary font-black">
-                        About
-                    </h1>
-                    <h1 className="p-4 text-center text-2xl text-theme-primary font-black">
-                        Portfolio
-                    </h1>
-                    <h1 className="p-4 text-center text-2xl text-theme-primary font-black">
-                        Skills
-                    </h1>
-                    <h1 className="p-4 text-center text-2xl text-theme-primary font-black">
-                        Contact
-                    </h1>
+                <div className="grid grid-flow-row gap-4">
+                    <LinkPage page={'Home'} onClick={closeBar} />
+                    <LinkPage page={'Portfolio'} onClick={closeBar} />
+                    <LinkPage page={'Skills'} onClick={closeBar} />
+                    <LinkPage page={'Contact'} onClick={closeBar} />
                 </div>
             </Drawer>
         </>
