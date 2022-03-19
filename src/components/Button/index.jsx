@@ -7,7 +7,7 @@ const Button = ({ text, onClick }) => {
     return (
         <button
             onClick={onClick}
-            className="text-white dark:text-theme-bg bg-theme-primary focus:ring-4 font-bold rounded-lg text-lg px-5 py-2 text-center mb-2">
+            className="text-white dark:text-theme-bg bg-theme-primary focus:ring-4 font-bold rounded-lg text-lg px-4 py-1 lg:py-2 text-center mb-2">
             {text}
         </button>
     );
