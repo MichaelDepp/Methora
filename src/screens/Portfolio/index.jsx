@@ -4,9 +4,9 @@ import Container from '../../components/Container';
 import HeaderTitle from '../../components/HeaderTitle';
 import PortfolioCard from '../../components/PortfolioCard';
 
-const Portfolio = () => {
+const Portfolio = (props) => {
     return (
-        <Container fullScreen={false}>
+        <Container id={props.id} fullScreen={false}>
             <div className="pt-8">
                 <HeaderTitle title={'Portfolio'} />
             </div>
