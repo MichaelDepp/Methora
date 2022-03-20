@@ -1,5 +1,5 @@
 import React from 'react';
-import ProfileBlob from 'components/ProfileBlob';
+import ImageBlob from 'components/ImageBlob';
 import Container from '../../components/Container';
 import HeaderTitle from '../../components/HeaderTitle';
 import ProgressBar from '../../components/ProgressBar';
@@ -11,7 +11,7 @@ const Skills = () => {
                 <HeaderTitle title={'Skills'} />
             </div>
             <div className="pt-28 lg:pt-80 flex justify-center">
-                <ProfileBlob image={'./assets/memoji-skills.webp'} />
+                <ImageBlob image={'./assets/memoji-skills.webp'} />
             </div>
             <div className="grid justify-items-center mt-4">
                 <ProgressBar skillName={'Flutter'} percentage={95} />
