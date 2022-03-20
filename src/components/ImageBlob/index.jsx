@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProfileBlob = (props) => {
+const ImageBlob = (props) => {
     return (
         <div className="bg-theme-primary w-64 h-64 lg:w-96 lg:h-96 rounded-full animate-blob shadow-2xl">
             <img
@@ -13,4 +13,4 @@ const ProfileBlob = (props) => {
     );
 };
 
-export default ProfileBlob;
+export default ImageBlob;
