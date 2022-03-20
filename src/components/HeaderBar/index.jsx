@@ -25,17 +25,17 @@ const HeaderBar = () => {
                     toggled={isOpen}
                     toggle={setOpen}
                 />
-                <div className="px-2">
+                <div className="p-3">
                     {theme === 'light' ? (
                         <RiMoonFill
                             className="text-theme-primary"
-                            size={20}
+                            size={22}
                             onClick={() => onSwitchTheme('dark')}
                         />
                     ) : (
                         <RiSunFill
                             className="text-theme-primary"
-                            size={20}
+                            size={22}
                             onClick={() => onSwitchTheme('light')}
                         />
                     )}
