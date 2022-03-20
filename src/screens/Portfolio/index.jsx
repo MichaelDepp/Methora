@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Container from '../../components/Container';
 import HeaderTitle from '../../components/HeaderTitle';
 import PortfolioCard from '../../components/PortfolioCard';
@@ -7,6 +7,10 @@ import Chip from 'components/Chip';
 const Portfolio = () => {
     const [activeChip, setActiveChip] = useState('All');
     const [displayData, setDisplayData] = useState([]);
+
+    useEffect(() => {
+        setDisplayData([...portfolioData.flutter, ...portfolioData.uiDesign]);
+    }, []);
 
     const portfolioData = {
         flutter: [
