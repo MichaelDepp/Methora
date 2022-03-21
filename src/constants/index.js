@@ -3,9 +3,9 @@ module.exports = {
         theme: {
             primary: '#835ecf',
             secondary: '#262626',
-            bg: '#1F1F1F',
+            bg: '#121315',
             lightBg: '#fefefe',
-            dark: '#191919'
+            dark: '#202427'
         },
         gray: {
             100: '#f7fafc',
