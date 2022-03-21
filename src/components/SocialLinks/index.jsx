@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     AiOutlineTwitter,
     AiOutlineDribbble,
@@ -9,16 +9,23 @@ import { useTheme } from 'next-themes';
 import constants from '../../constants';
 
 const SocialLink = () => {
+    const [iconColor, setIconColor] = useState(constants.colors.theme.lightBg);
     const { theme } = useTheme();
-    const colorConfig =
-        theme === 'dark' ? constants.colors.theme.lightBg : constants.colors.theme.dark;
+
+    useEffect(() => {
+        if (theme === 'dark') {
+            setIconColor(constants.colors.theme.lightBg);
+        } else {
+            setIconColor(constants.colors.theme.dark);
+        }
+    }, [theme]);
 
     return (
         <div className="flex flex-row justify-between my-8 mx-16 lg:mx-0 lg:mr-32">
-            <AiOutlineTwitter size={18} color={colorConfig} />
-            <AiOutlineGithub size={18} color={colorConfig} />
-            <AiFillLinkedin size={18} color={colorConfig} />
-            <AiOutlineDribbble size={18} color={colorConfig} />
+            <AiOutlineTwitter size={18} color={iconColor} />
+            <AiOutlineGithub size={18} color={iconColor} />
+            <AiFillLinkedin size={18} color={iconColor} />
+            <AiOutlineDribbble size={18} color={iconColor} />
         </div>
     );
 };
