@@ -45,32 +45,21 @@ const Home = () => {
                                     .type('i', { delay: 400 })
                                     .pause(750)
                                     .move(null, { to: 'END', instant: true, delay: 300 })
-                                    .delete()
                                     .pause(500)
-                                    .type('Well...', { delay: 400 })
-                                    .pause(1000)
-                                    .type(' urmmmm', { delay: 400 })
-                                    .pause(1000)
                                     .delete()
-                                    .type('I am a ')
+                                    .type("I'm an")
                                     .pause(1000)
                                     .type(
-                                        '<strong class="text-theme-primary">Ui Desingr</strong>',
+                                        '<strong class="text-theme-primary"> Ui Desingr</strong>',
                                         { delay: 1000 }
                                     )
                                     .delete(3)
                                     .type('<strong class="text-theme-primary">gner</strong>', {
                                         delay: 400
                                     })
-                                    .move(-12, { delay: 800 })
-                                    .delete(5, { delay: 1000 })
-                                    .type("'m an", { delay: 1000 })
                                     .move(null, { to: 'END', instant: true, delay: 500 })
                                     .pause(1000)
-                                    .delete(15, { delay: 1000 })
-                                    .type(' also...', { delay: 1000 })
-                                    .pause(1000)
-                                    .delete(7, { delay: 1000 })
+                                    .delete(14, { delay: 1000 })
                                     .type('a')
                                     .pause(800)
                                     .type(
@@ -78,25 +67,6 @@ const Home = () => {
                                         {
                                             delay: 800
                                         }
-                                    )
-                                    .delete(9, { delay: 1000 })
-                                    .type(
-                                        '<em><strong class="text-theme-primary"> Developr</strong></em>',
-                                        {
-                                            delay: 800
-                                        }
-                                    )
-                                    .delete(2, { delay: 200 })
-                                    .type(
-                                        '<em><strong class="text-theme-primary">per</strong></em>',
-                                        {
-                                            delay: 800
-                                        }
-                                    )
-                                    .pause(2000)
-                                    .type(
-                                        '<em><strong class="text-theme-primary"> 👩‍💻</strong></em>',
-                                        { delay: 400 }
                                     )
                                     .pause(1000);
 
