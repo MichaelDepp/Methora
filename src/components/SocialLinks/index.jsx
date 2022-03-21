@@ -13,10 +13,10 @@ const SocialLink = () => {
     const { theme } = useTheme();
 
     useEffect(() => {
-        if (theme === 'dark') {
-            setIconColor(constants.colors.theme.lightBg);
-        } else {
+        if (theme === 'light') {
             setIconColor(constants.colors.theme.dark);
+        } else {
+            setIconColor(constants.colors.theme.lightBg);
         }
     }, [theme]);
 
