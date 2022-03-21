@@ -1,12 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
-import Blog from '../screens/Blog';
-import Contact from '../screens/Contact';
-import Home from '../screens/Home';
-import Skills from '../screens/Skills';
-import Portfolio from '../screens/Portfolio';
-import HeaderBar from '../components/HeaderBar';
-import Footer from '../components/Footer';
+import Blog from 'screens/Blog';
+import Contact from 'screens/Contact';
+import Home from 'screens/Home';
+import Skills from 'screens/Skills';
+import Portfolio from 'screens/Portfolio';
+import HeaderBar from 'components/HeaderBar';
+import Footer from 'components/Footer';
 
 const Index = () => (
     <>

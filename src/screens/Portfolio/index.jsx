@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Container from '../../components/Container';
-import HeaderTitle from '../../components/HeaderTitle';
-import PortfolioCard from '../../components/PortfolioCard';
+import Container from 'components/Container';
+import HeaderTitle from 'components/HeaderTitle';
+import PortfolioCard from 'components/PortfolioCard';
 import Chip from 'components/Chip';
 
 const Portfolio = () => {

@@ -1,7 +1,7 @@
 import React from 'react';
-import BlogCard from '../../components/BlogCard';
-import Container from '../../components/Container';
-import HeaderTitle from '../../components/HeaderTitle';
+import BlogCard from 'components/BlogCard';
+import Container from 'components/Container';
+import HeaderTitle from 'components/HeaderTitle';
 
 const Blog = () => {
     return (
