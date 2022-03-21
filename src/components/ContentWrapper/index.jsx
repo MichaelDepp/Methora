@@ -1,7 +1,7 @@
 import React from 'react';
 
-const ContentWrapper = ({ children }) => {
-    return <div className="max-w-lg mx-auto">{children}</div>;
+const ContentWrapper = (props) => {
+    return <div className={`max-w-lg mx-auto ${props.style}`}>{props.children}</div>;
 };
 
 export default ContentWrapper;
