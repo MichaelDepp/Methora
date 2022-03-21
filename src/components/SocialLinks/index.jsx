@@ -8,7 +8,7 @@ import {
 
 const SocialLink = () => {
     return (
-        <div className="flex flex-row justify-around my-8">
+        <div className="flex flex-row justify-between my-8">
             <AiOutlineTwitter size={18} />
             <AiOutlineGithub size={18} />
             <AiFillLinkedin size={18} />
