@@ -17,12 +17,29 @@ const Home = () => {
                 </div>
                 <ContentWrapper style={'max-w-sm text-center lg:text-left my-auto'}>
                     <p className={`pt-8 lg:pt-0 text-2xl font-bold ${textColorConfig}`}>
-                        Hi there 👋
+                        <TypeIt
+                            getBeforeInit={(instance) => {
+                                instance
+                                    .type('Hi there', { delay: 1000 })
+                                    .pause(300)
+                                    .type(' 👋', { delay: 200 })
+                                    .pause(500);
+
+                                // Remember to return it!
+                                return instance;
+                            }}
+                            options={{
+                                afterComplete: function (instance) {
+                                    instance.destroy();
+                                }
+                            }}
+                        />
                     </p>
                     <p className={`pt-4 text-3xl font-bold ${textColorConfig}`}>
                         <TypeIt
                             getBeforeInit={(instance) => {
                                 instance
+                                    .pause(3500)
                                     .type("I'm Elsha")
                                     .move(-3, { delay: 100 })
                                     .type('i', { delay: 400 })
