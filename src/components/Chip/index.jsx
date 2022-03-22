@@ -7,9 +7,12 @@ const Chip = (props) => {
 
     return (
         <div
-            className={`cursor-pointer flex justify-center items-center m-1 px-4 py-2 rounded-full hover:bg-theme-primary dark:hover:bg-theme-primary ${colorConfig}`}
+            className={`cursor-pointer flex justify-center items-center px-4 py-2 rounded-full hover:bg-theme-primary dark:hover:bg-theme-primary ${colorConfig}`}
             onClick={chipClicked}>
-            <div className={`text-xs font-normal leading-none ${props.selected && 'text-white'}`}>
+            <div
+                className={`text-xs lg:text-sm font-normal leading-none ${
+                    props.selected && 'text-white'
+                }`}>
                 {props.name}
             </div>
         </div>
