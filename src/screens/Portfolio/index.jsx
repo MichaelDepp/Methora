@@ -61,7 +61,7 @@ const Portfolio = () => {
             <div className="pt-8">
                 <HeaderTitle title={'Portfolio'} />
             </div>
-            <div className="pt-20 flex flex-wrap justify-center">
+            <div className="pt-8 lg:pt-12 grid grid-flow-col justify-center gap-4">
                 <Chip name={'All'} selected={activeChip === 'All'} onClick={onClickChip} />
                 <Chip name={'Flutter'} selected={activeChip === 'Flutter'} onClick={onClickChip} />
                 <Chip
@@ -70,7 +70,7 @@ const Portfolio = () => {
                     onClick={onClickChip}
                 />
             </div>
-            <div className="py-12 justify-items-center grid grid-rows-1 gap-4 lg:grid-cols-3 lg:gap-8 lg">
+            <div className="py-12 lg:py-16 justify-items-center grid grid-rows-1 gap-4 lg:grid-cols-3 lg:gap-8">
                 {displayData.map((data) => (
                     <PortfolioCard
                         key={data.name}

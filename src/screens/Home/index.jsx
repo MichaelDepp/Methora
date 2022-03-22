@@ -35,7 +35,7 @@ const Home = () => {
                             }}
                         />
                     </p>
-                    <p className={`pt-4 text-3xl font-bold ${textColorConfig}`}>
+                    <p className={`pt-4 text-3xl xl:text-4xl font-bold ${textColorConfig}`}>
                         <TypeIt
                             getBeforeInit={(instance) => {
                                 instance
@@ -75,7 +75,7 @@ const Home = () => {
                             }}
                         />
                     </p>
-                    <p className={`pt-4 text-base ${textColorConfig}`}>
+                    <p className={`pt-4 lg:mr-8 text-base lg:text-lg ${textColorConfig}`}>
                         Tokyo based react/react native developer with over 5 years of experience in
                         this field.
                     </p>
