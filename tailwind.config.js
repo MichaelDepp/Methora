@@ -60,11 +60,16 @@ module.exports = {
                 wiggle: {
                     '0%, 100%': { transform: 'rotate(-3deg)' },
                     '50%': { transform: 'rotate(3deg)' }
+                },
+                fadeIn: {
+                    '0%': { opacity: 0 },
+                    '100%': { opacity: 1 }
                 }
             },
             // The combinations of the keyframes will be used here
             animation: {
-                blob: 'transform 20s ease-in-out infinite both alternate, bounce 10s infinite both alternate, wiggle 20s ease-in-out infinite'
+                blob: 'transform 20s ease-in-out infinite both alternate, bounce 10s infinite both alternate, wiggle 20s ease-in-out infinite',
+                fadeIn: 'fadeIn 2s ease-in forwards'
             },
             colors: constants.colors,
             height: {
