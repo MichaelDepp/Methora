@@ -36,7 +36,7 @@ const Skills = () => {
             <div
                 ref={ref}
                 className="pt-12 lg:pt-72 justify-items-center grid grid-flow-row lg:gap-24 lg:grid-cols-2 lg:grid-rows-1">
-                <motion.div className="flex justify-center lg:justify-end" animate={animation}>
+                <motion.div animate={animation} className="flex justify-center lg:justify-end">
                     <ImageBlob image={'./assets/memoji-skills.webp'} />
                 </motion.div>
                 <ContentWrapper style={'w-full pt-8 lg:pt-0 my-auto'}>
