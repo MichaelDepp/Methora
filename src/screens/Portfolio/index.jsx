@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { useAnimation, motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import Container from 'components/Container';
 import HeaderTitle from 'components/HeaderTitle';
 import PortfolioCard from 'components/PortfolioCard';
@@ -7,6 +9,24 @@ import Chip from 'components/Chip';
 const Portfolio = () => {
     const [activeChip, setActiveChip] = useState('All');
     const [displayData, setDisplayData] = useState([]);
+    const { ref, inView } = useInView();
+    const animation = useAnimation();
+
+    useEffect(() => {
+        if (inView) {
+            animation.start({
+                transition: { duration: 0.5, ease: 'easeIn' },
+                opacity: 1,
+                x: 0
+            });
+        } else {
+            animation.start({
+                transition: { duration: 0.5, ease: 'easeOut' },
+                opacity: 0,
+                x: '-5%'
+            });
+        }
+    }, [inView]);
 
     useEffect(() => {
         setDisplayData([...portfolioData.flutter, ...portfolioData.uiDesign]);
@@ -61,7 +81,7 @@ const Portfolio = () => {
             <div className="pt-8">
                 <HeaderTitle title={'Portfolio'} />
             </div>
-            <div className="pt-8 lg:pt-12 grid grid-flow-col justify-center gap-4">
+            <div ref={ref} className="pt-8 lg:pt-12 grid grid-flow-col justify-center gap-4">
                 <Chip name={'All'} selected={activeChip === 'All'} onClick={onClickChip} />
                 <Chip name={'Flutter'} selected={activeChip === 'Flutter'} onClick={onClickChip} />
                 <Chip
@@ -70,15 +90,19 @@ const Portfolio = () => {
                     onClick={onClickChip}
                 />
             </div>
-            <div className="py-12 lg:py-16 justify-items-center grid grid-rows-1 gap-4 lg:grid-cols-3 lg:gap-8">
-                {displayData.map((data) => (
-                    <PortfolioCard
-                        key={data.name}
-                        imageSrc={data.imageSrc}
-                        onClick={() => console.log('cool')}
-                    />
-                ))}
-            </div>
+            <motion.div
+                animate={animation}
+                className="py-12 lg:py-16 justify-items-center grid grid-rows-1 gap-4 lg:grid-cols-3 lg:gap-8">
+                {displayData.map((data, key) => {
+                    return (
+                        <PortfolioCard
+                            key={key}
+                            imageSrc={data.imageSrc}
+                            onClick={() => console.log('cool')}
+                        />
+                    );
+                })}
+            </motion.div>
         </Container>
     );
 };
