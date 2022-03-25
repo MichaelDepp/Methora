@@ -15,6 +15,7 @@
     "license": "ISC",
     "dependencies": {
         "@tailwindcss/line-clamp": "^0.3.1",
+        "framer-motion": "^6.2.8",
         "hamburger-react": "^2.4.1",
         "next": "^12.1.0",
         "next-pwa": "^5.4.6",
@@ -22,6 +23,7 @@
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "react-icons": "^4.3.1",
+        "react-intersection-observer": "^8.33.1",
         "typeit-react": "^2.3.3"
     },
     "devDependencies": {
