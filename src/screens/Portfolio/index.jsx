@@ -70,7 +70,7 @@ const Portfolio = () => {
                     onClick={onClickChip}
                 />
             </div>
-            <div className="py-12 lg:py-16 justify-items-center grid grid-rows-1 gap-4 lg:grid-cols-3 lg:gap-8 animate-fadeIn">
+            <div className="py-12 lg:py-16 justify-items-center grid grid-rows-1 gap-4 lg:grid-cols-3 lg:gap-8">
                 {displayData.map((data) => (
                     <PortfolioCard
                         key={data.name}
