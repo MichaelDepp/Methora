@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { LayoutGroup, useAnimation, motion } from 'framer-motion';
+import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const ProgressBar = ({ custom, skillName, percentage }) => {
@@ -12,20 +12,20 @@ const ProgressBar = ({ custom, skillName, percentage }) => {
             progressBarAnimation.start((i) => ({
                 opacity: 1,
                 width: `${percentage}%`,
-                transition: { delay: i * 0.8 }
+                transition: { delay: i * 0.5 }
             }));
             opacityAnimation.start((i) => ({
-                transition: { delay: i * 0.5 },
+                transition: { delay: i * 0.3 },
                 opacity: 1
             }));
         } else {
-            progressBarAnimation.start((i) => ({
+            progressBarAnimation.start({
                 opacity: 0,
                 width: '0%',
-                transition: { delay: 1 }
-            }));
+                transition: { delay: 0.5 }
+            });
             opacityAnimation.start({
-                transition: { delay: 0.8 },
+                transition: { delay: 0.3 },
                 opacity: 0
             });
         }
@@ -35,26 +35,24 @@ const ProgressBar = ({ custom, skillName, percentage }) => {
         return null;
     }
     return (
-        <LayoutGroup>
-            <div ref={ref} className="pt-4 lg:pt-8 w-full">
-                <motion.p
-                    custom={custom}
-                    animate={opacityAnimation}
-                    className="font-regular text-base lg:text-lg">
-                    {skillName}
-                </motion.p>
+        <div ref={ref} className="pt-4 lg:pt-8 w-full">
+            <motion.p
+                custom={custom}
+                animate={opacityAnimation}
+                className="font-regular text-base lg:text-lg">
+                {skillName}
+            </motion.p>
+            <motion.div
+                custom={custom}
+                animate={opacityAnimation}
+                className="w-full bg-theme-bg/20 dark:bg-theme-lightBg/20 rounded-lg h-1 overflow-hidden">
                 <motion.div
                     custom={custom}
-                    animate={opacityAnimation}
-                    className="w-full bg-theme-bg/20 dark:bg-theme-lightBg/20 rounded-lg h-1 overflow-hidden">
-                    <motion.div
-                        custom={custom}
-                        animate={progressBarAnimation}
-                        className="bg-theme-primary rounded-lg h-1"
-                        style={{ width: `${percentage}%` }}></motion.div>
-                </motion.div>
-            </div>
-        </LayoutGroup>
+                    animate={progressBarAnimation}
+                    className="bg-theme-primary rounded-lg h-1"
+                    style={{ width: `${percentage}%` }}></motion.div>
+            </motion.div>
+        </div>
     );
 };
 
