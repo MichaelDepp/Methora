@@ -15,13 +15,13 @@ const Portfolio = () => {
     useEffect(() => {
         if (inView) {
             animation.start({
-                transition: { duration: 0.5, delay: 1, ease: 'easeIn' },
+                transition: { duration: 0.5, delay: 0.5, ease: 'easeIn' },
                 opacity: 1,
                 x: 0
             });
         } else {
             animation.start({
-                transition: { duration: 0.5, delay: 1, ease: 'easeOut' },
+                transition: { duration: 0.5, ease: 'easeOut' },
                 opacity: 0,
                 x: '-5%'
             });
@@ -81,7 +81,7 @@ const Portfolio = () => {
             <div className="pt-8">
                 <HeaderTitle title={'Portfolio'} />
             </div>
-            <div ref={ref} className="pt-8 lg:pt-12 grid grid-flow-col justify-center gap-4">
+            <div className="pt-8 lg:pt-12 grid grid-flow-col justify-center gap-4">
                 <Chip name={'All'} selected={activeChip === 'All'} onClick={onClickChip} />
                 <Chip name={'Flutter'} selected={activeChip === 'Flutter'} onClick={onClickChip} />
                 <Chip
@@ -91,6 +91,7 @@ const Portfolio = () => {
                 />
             </div>
             <motion.div
+                ref={ref}
                 animate={animation}
                 className="py-12 lg:py-16 justify-items-center grid grid-rows-1 gap-4 lg:grid-cols-3 lg:gap-8">
                 {displayData.map((data, key) => {

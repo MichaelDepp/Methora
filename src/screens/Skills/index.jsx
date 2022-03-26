@@ -17,7 +17,7 @@ const Skills = () => {
     useEffect(() => {
         if (inView) {
             animation.start({
-                transition: { duration: 1 },
+                transition: { duration: 1, delay: 0.5 },
                 opacity: 1
             });
         } else {
