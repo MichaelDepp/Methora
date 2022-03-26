@@ -15,13 +15,13 @@ const Portfolio = () => {
     useEffect(() => {
         if (inView) {
             animation.start({
-                transition: { duration: 0.5, ease: 'easeIn' },
+                transition: { duration: 0.5, delay: 1, ease: 'easeIn' },
                 opacity: 1,
                 x: 0
             });
         } else {
             animation.start({
-                transition: { duration: 0.5, ease: 'easeOut' },
+                transition: { duration: 0.5, delay: 1, ease: 'easeOut' },
                 opacity: 0,
                 x: '-5%'
             });
