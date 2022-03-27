@@ -5,7 +5,7 @@ const BlogCard = () => {
     const titleColorConfig = 'hover:text-theme-primary dark:hover:text-theme-primary';
     return (
         <div
-            className={`overflow-hidden text-theme-bg dark:text-theme-lightBg bg-gray-200 dark:bg-theme-dark transition-shadow duration-300 rounded-lg shadow-sm w-64 h-96 lg:w-80 lg:h-112 ${bgColorConfig}`}>
+            className={`overflow-hidden text-theme-bg dark:text-theme-lightBg bg-gray-200 dark:bg-theme-dark transition-colors duration-700 ease-in-out rounded-lg shadow-sm w-64 h-96 lg:w-80 lg:h-112 ${bgColorConfig}`}>
             <img
                 src="https://images.pexels.com/photos/447592/pexels-photo-447592.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                 className="object-cover w-full h-64"
