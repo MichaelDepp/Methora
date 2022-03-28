@@ -40,7 +40,7 @@ const ContactForm = () => {
                     className={`${inputStyleConfig} p-4 pt-2 pl-4 lg:p-8 lg:pl-4 lg:pt-4`}
                 />
             </form>
-            <div className="flex justify-center lg:justify-start py-4">
+            <div className="flex justify-center lg:justify-start pt-4 pb-8">
                 <Button text={'Submit'} onClick={onSubmitForm} />
             </div>
         </>
