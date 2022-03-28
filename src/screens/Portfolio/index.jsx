@@ -99,6 +99,7 @@ const Portfolio = () => {
                         <PortfolioCard
                             key={key}
                             imageSrc={data.imageSrc}
+                            title={data.name}
                             onClick={() => console.log('cool')}
                         />
                     );
