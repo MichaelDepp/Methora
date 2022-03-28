@@ -6,13 +6,14 @@ import ContactForm from 'components/ContactForm';
 import Container from 'components/Container';
 import HeaderTitle from 'components/HeaderTitle';
 import ImageBlob from 'components/ImageBlob';
-import ContentWrapper from 'components/ContentWrapper';
 
 const Contact = () => {
     const { ref, inView } = useInView({
         threshold: 0.2
     });
+
     const animation = useAnimation();
+    const formAnimation = useAnimation();
 
     useEffect(() => {
         if (inView) {
@@ -20,10 +21,20 @@ const Contact = () => {
                 transition: { duration: 1, delay: 0.5 },
                 opacity: 1
             });
+            formAnimation.start({
+                transition: { duration: 0.5, delay: 0.5, ease: 'easeIn' },
+                opacity: 1,
+                x: 0
+            });
         } else {
             animation.start({
                 transition: { duration: 1 },
                 opacity: 0
+            });
+            formAnimation.start({
+                transition: { duration: 0.5, ease: 'easeOut' },
+                opacity: 0,
+                x: '-5%'
             });
         }
     }, [inView]);
@@ -38,7 +49,9 @@ const Contact = () => {
                 <motion.div animate={animation} className="flex justify-center">
                     <ImageBlob image={'./assets/memoji-contact.webp'} />
                 </motion.div>
-                <ContentWrapper style={'text-center lg:text-left lg:row-end-1 lg:my-auto'}>
+                <motion.div
+                    animate={formAnimation}
+                    className="text-center lg:text-left lg:row-end-1 lg:my-auto">
                     <h3 className="text-theme-primary text-xl lg:text-3xl font-bold pt-8 lg:pt-0">{`Let's Talk`}</h3>
                     <p className="text-theme-bg dark:text-theme-lightBg text-sm lg:text-base pt-2 leading-4 max-w-md">
                         {
@@ -48,7 +61,7 @@ const Contact = () => {
                     <div className="pt-4">
                         <ContactForm />
                     </div>
-                </ContentWrapper>
+                </motion.div>
             </div>
         </Container>
     );
