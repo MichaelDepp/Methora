@@ -46,6 +46,7 @@ const HeaderBar = () => {
                     <LinkPage page={'Home'} onClick={closeBar} />
                     <LinkPage page={'Skills'} onClick={closeBar} />
                     <LinkPage page={'Portfolio'} onClick={closeBar} />
+                    <LinkPage page={'Testimony'} onClick={closeBar} />
                     <LinkPage page={'Blog'} onClick={closeBar} />
                     <LinkPage page={'Contact'} onClick={closeBar} />
                 </div>
