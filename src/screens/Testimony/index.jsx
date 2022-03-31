@@ -32,7 +32,7 @@ const Testimony = () => {
         {
             name: 'Emily Aviv',
             position: 'Mobile Engineer, Tesla',
-            image: 'https://images.pexels.com/photos/11519125/pexels-photo-11519125.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+            image: 'https://images.pexels.com/photos/4038261/pexels-photo-4038261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
             testimony:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales ut nunc sed laoreet.'
         },
