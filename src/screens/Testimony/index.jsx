@@ -30,7 +30,7 @@ const Testimony = () => {
 
     const testimonyData = [
         {
-            name: 'Emily Peterson',
+            name: 'Emily Aviv',
             position: 'Mobile Engineer, Tesla',
             image: 'https://images.pexels.com/photos/11519125/pexels-photo-11519125.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
             testimony:
@@ -41,14 +41,14 @@ const Testimony = () => {
             position: 'Data Scientist, Boston',
             image: 'https://images.pexels.com/photos/5935279/pexels-photo-5935279.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
             testimony:
-                'Cras in mattis urna. Vestibulum convallis dui vel lorem vestibulum commodo. Quisque rutrum, risus.'
+                'Cras in mattis urna. Vestibulum  Sed maximus turpis vel massa tristique, quis sagittis lorem.'
         },
         {
             name: 'Deepika Singh',
             position: 'Solution Architect, Space X',
             image: 'https://images.pexels.com/photos/11555708/pexels-photo-11555708.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
             testimony:
-                'Aenean condimentum semper dictum. Sed maximus turpis vel massa tristique, quis sagittis lorem.'
+                'Aenean condimentum semper dictum. convallis dui vel lorem vestibulum commodo. Quisque rutrum, risus.'
         },
         {
             name: 'Peter Hill',
