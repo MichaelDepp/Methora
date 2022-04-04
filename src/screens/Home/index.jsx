@@ -11,7 +11,7 @@ const Home = () => {
 
     return (
         <Container id="home">
-            <div className="pt-28 lg:pt-96 grid grid-flow-row lg:grid-flow-col lg:gap-24 lg:justify-center">
+            <div className="grid grid-flow-row lg:grid-flow-col lg:gap-24 lg:justify-center content-center h-full">
                 <div className="flex justify-center">
                     <ImageBlob image={'./assets/memoji-home.png'} />
                 </div>

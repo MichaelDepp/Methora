@@ -35,11 +35,13 @@ const Skills = () => {
             </div>
             <div
                 ref={ref}
-                className="pt-12 lg:pt-72 justify-items-center grid grid-flow-row lg:gap-24 lg:grid-cols-2 lg:grid-rows-1">
-                <motion.div animate={animation} className="flex justify-center lg:justify-end">
+                className="pb-16 lg:pb-24 grid grid-flow-row gap-8 lg:gap-24 lg:grid-cols-2 lg:grid-rows-1 content-center lg:content-end h-4/5">
+                <motion.div
+                    animate={animation}
+                    className="flex justify-center lg:justify-end lg:items-center">
                     <ImageBlob image={'./assets/memoji-skills.webp'} />
                 </motion.div>
-                <ContentWrapper style={'w-full pt-8 lg:pt-0 my-auto'}>
+                <ContentWrapper style={'w-full my-auto'}>
                     <ProgressBar custom={1} skillName={'Flutter'} percentage={95} />
                     <ProgressBar custom={2} skillName={'React Native'} percentage={90} />
                     <ProgressBar custom={3} skillName={'Machine Learning'} percentage={45} />
