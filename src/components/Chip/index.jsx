@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Chip = (props) => {
-    const colorConfig = props.selected ? 'bg-theme-primary' : 'bg-gray-200 dark:bg-theme-dark';
+    const colorConfig = props.selected ? 'bg-theme-primary' : 'bg-gray-200 dark:bg-theme-darkLight';
 
     const chipClicked = () => props.onClick(props.name);
 

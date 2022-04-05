@@ -24,7 +24,7 @@ const BlogCard = ({ title, description, imageSrc }) => {
 
     return (
         <div
-            className={`overflow-hidden text-theme-bg dark:text-theme-lightBg bg-gray-200 dark:bg-theme-dark transition-colors duration-700 ease-in-out rounded-lg shadow-sm w-64 h-96 lg:w-80 lg:h-112 ${bgColorConfig}`}
+            className={`overflow-hidden text-theme-bg dark:text-theme-lightBg bg-gray-200 dark:bg-theme-darkLight transition-colors duration-700 ease-in-out rounded-lg shadow-sm w-64 h-96 lg:w-80 lg:h-112 ${bgColorConfig}`}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}>
             <div className="overflow-hidden w-full">
