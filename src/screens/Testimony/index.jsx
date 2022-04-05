@@ -66,6 +66,22 @@ const Testimony = () => {
         }
     ];
 
+    const ArrowLeft = (props) => (
+        <AiFillLeftCircle
+            className={props.className}
+            onClick={props.onClick}
+            color={constants.colors.theme.primary}
+        />
+    );
+
+    const ArrowRight = (props) => (
+        <AiFillRightCircle
+            className={props.className}
+            onClick={props.onClick}
+            color={constants.colors.theme.primary}
+        />
+    );
+
     const settings = {
         className: 'center',
         centerMode: true,
@@ -75,8 +91,8 @@ const Testimony = () => {
         centerPadding: '0px',
         slidesToShow: 3,
         speed: 500,
-        prevArrow: <AiFillLeftCircle color={constants.colors.theme.primary} />,
-        nextArrow: <AiFillRightCircle color={constants.colors.theme.primary} />,
+        prevArrow: <ArrowLeft />,
+        nextArrow: <ArrowRight />,
         customPaging: (index) => {
             const pagingColor = index === currentSlide ? 'bg-theme-primary' : 'bg-theme-primary/40';
             return <div className={`${pagingColor} w-2 h-2 rounded-full mt-4`} />;
