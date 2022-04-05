@@ -35,24 +35,24 @@ const Portfolio = () => {
     const portfolioData = {
         flutter: [
             {
-                name: 'Food delivery app',
+                title: 'Food delivery app',
                 imageSrc:
                     'https://cdn.dribbble.com/userupload/1808226/file/original-43fd0dc66317c79c4a827d41e2478a72.png'
             },
             {
-                name: 'Uber app',
+                title: 'Uber app',
                 imageSrc:
                     'https://cdn.dribbble.com/users/33073/screenshots/11863204/media/3f76f45cf65a050a4a952f98d5b31c5f.png'
             }
         ],
         uiDesign: [
             {
-                name: 'Ecom Sneakers',
+                title: 'Ecom Sneakers',
                 imageSrc:
                     'https://cdn.dribbble.com/users/232800/screenshots/14385267/media/6748fd123e1025602b28fc1ed9174fd5.png'
             },
             {
-                name: 'Music Application',
+                title: 'Music Application',
                 imageSrc:
                     'https://cdn.dribbble.com/users/452635/screenshots/14276201/media/9a9dfb97b7525e2539eee882bd949a14.png'
             }
