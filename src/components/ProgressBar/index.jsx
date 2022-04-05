@@ -12,7 +12,7 @@ const ProgressBar = ({ custom, skillName, percentage }) => {
             progressBarAnimation.start((i) => ({
                 opacity: 1,
                 width: `${percentage}%`,
-                transition: { delay: i * 0.5, ease: 'easeIn' }
+                transition: { delay: i * 0.5, duration: 0.6, ease: 'easeInOut' }
             }));
             opacityAnimation.start((i) => ({
                 transition: { delay: i * 0.3 },
