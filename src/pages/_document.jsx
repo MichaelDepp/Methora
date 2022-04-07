@@ -6,6 +6,7 @@ export default class Document extends NextDocument {
         return (
             <Html>
                 <Head>
+                    <link rel="icon" href="/favicon.ico" />
                     <link rel="shortcut icon" href="./assets/rocket-icon.png" />
                     <link rel="apple-touch-icon" href="./assets/rocket-icon.png" />
                     <link rel="manifest" href="/manifest.json" />

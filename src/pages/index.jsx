@@ -10,7 +10,6 @@ import Testimony from 'screens/Testimony';
 import Portfolio from 'screens/Portfolio';
 import HeaderBar from 'components/HeaderBar';
 import Spinner from 'components/Spinner';
-import Footer from 'components/Footer';
 
 const Index = () => {
     const [loading, setLoading] = useState(false);
@@ -63,7 +62,6 @@ const Index = () => {
         <>
             <Head>
                 <title>Methora Portfolio Theme - Confetti Themes</title>
-                <link rel="icon" href="/favicon.ico" />
             </Head>
             {!loading ? (
                 <Spinner color="bg-theme-primary" />
@@ -88,7 +86,6 @@ const Index = () => {
                         <Contact />
                     </div>
                     <HeaderBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-                    {/* <Footer /> */}
                 </>
             )}
         </>
