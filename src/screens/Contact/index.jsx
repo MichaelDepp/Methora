@@ -6,6 +6,7 @@ import ContactForm from 'components/ContactForm';
 import Container from 'components/Container';
 import HeaderTitle from 'components/HeaderTitle';
 import ImageBlob from 'components/ImageBlob';
+import Footer from 'components/Footer';
 
 const Contact = () => {
     const { ref, inView } = useInView({
@@ -63,6 +64,7 @@ const Contact = () => {
                     </div>
                 </motion.div>
             </div>
+            <Footer />
         </Container>
     );
 };
