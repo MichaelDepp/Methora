@@ -35,7 +35,7 @@ const ProgressBar = ({ custom, skillName, percentage }) => {
         return null;
     }
     return (
-        <div ref={ref} className="pt-4 lg:pt-8 w-full">
+        <div ref={ref} className="w-full pt-4 lg:pt-8">
             <motion.p
                 custom={custom}
                 animate={opacityAnimation}
@@ -45,11 +45,11 @@ const ProgressBar = ({ custom, skillName, percentage }) => {
             <motion.div
                 custom={custom}
                 animate={opacityAnimation}
-                className="w-full bg-theme-bg/20 dark:bg-theme-lightBg/20 rounded-lg h-1 overflow-hidden">
+                className="h-1 w-full overflow-hidden rounded-lg bg-theme-bg/20 dark:bg-theme-lightBg/20">
                 <motion.div
                     custom={custom}
                     animate={progressBarAnimation}
-                    className="bg-theme-primary rounded-lg h-1"
+                    className="h-1 rounded-lg bg-theme-primary"
                     style={{ width: `${percentage}%` }}></motion.div>
             </motion.div>
         </div>

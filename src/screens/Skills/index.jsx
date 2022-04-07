@@ -35,10 +35,10 @@ const Skills = () => {
             </div>
             <div
                 ref={ref}
-                className="pb-16 lg:pb-24 grid grid-flow-row gap-8 lg:gap-24 lg:grid-cols-2 lg:grid-rows-1 content-center lg:content-end h-4/5">
+                className="grid h-4/5 grid-flow-row content-center gap-8 pb-16 lg:grid-cols-2 lg:grid-rows-1 lg:content-end lg:gap-24 lg:pb-24">
                 <motion.div
                     animate={animation}
-                    className="flex justify-center lg:justify-end lg:items-center">
+                    className="flex justify-center lg:items-center lg:justify-end">
                     <ImageBlob image={'./assets/memoji-skills.webp'} />
                 </motion.div>
                 <ContentWrapper style={'w-full my-auto'}>

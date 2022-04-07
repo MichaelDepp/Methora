@@ -7,7 +7,7 @@ const Button = (props) => {
     return (
         <button
             onClick={props.onClick}
-            className="text-white dark:text-theme-bg bg-theme-primary focus:ring-4 font-bold rounded-lg text-lg px-4 py-1 lg:py-2 text-center mb-2">
+            className="mb-2 rounded-lg bg-theme-primary px-4 py-1 text-center text-lg font-bold text-white focus:ring-4 dark:text-theme-bg lg:py-2">
             {props.text}
         </button>
     );

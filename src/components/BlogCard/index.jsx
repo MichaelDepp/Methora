@@ -24,26 +24,26 @@ const BlogCard = ({ title, description, imageSrc }) => {
 
     return (
         <div
-            className={`overflow-hidden text-theme-bg dark:text-theme-lightBg bg-gray-200 dark:bg-theme-darkLight transition-colors duration-700 ease-in-out rounded-lg shadow-sm w-64 h-96 lg:w-80 lg:h-112 ${bgColorConfig}`}
+            className={`h-96 w-64 overflow-hidden rounded-lg bg-gray-200 text-theme-bg shadow-sm transition-colors duration-700 ease-in-out dark:bg-theme-darkLight dark:text-theme-lightBg lg:h-112 lg:w-80 ${bgColorConfig}`}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}>
-            <div className="overflow-hidden w-full">
+            <div className="w-full overflow-hidden">
                 <motion.img
                     animate={animation}
                     src={imageSrc}
-                    className="object-cover w-full h-64"
+                    className="h-64 w-full object-cover"
                     alt={title}
                 />
             </div>
-            <div className={`px-5 py-3 lg:py-5 leading-none ${isHovered && textHoverConfig}`}>
+            <div className={`px-5 py-3 leading-none lg:py-5 ${isHovered && textHoverConfig}`}>
                 <a
                     href="/"
                     aria-label="Category"
                     title="Simple is better"
-                    className="line-clamp-2 text-lg lg:text-xl font-bold mb-2 lg:mb-4">
+                    className="mb-2 text-lg font-bold line-clamp-2 lg:mb-4 lg:text-xl">
                     {title}
                 </a>
-                <p className="line-clamp-4 mb-2 text-sm">{description}</p>
+                <p className="mb-2 text-sm line-clamp-4">{description}</p>
             </div>
         </div>
     );

@@ -11,12 +11,12 @@ const Home = () => {
 
     return (
         <Container id="home">
-            <div className="grid grid-flow-row lg:grid-flow-col lg:gap-24 lg:justify-center content-center h-full">
+            <div className="grid h-full grid-flow-row content-center lg:grid-flow-col lg:justify-center lg:gap-24">
                 <div className="flex justify-center">
                     <ImageBlob image={'./assets/memoji-home.png'} />
                 </div>
                 <ContentWrapper style={'max-w-sm text-center lg:text-left my-auto'}>
-                    <p className={`pt-8 lg:pt-0 text-2xl font-bold ${textColorConfig}`}>
+                    <p className={`pt-8 text-2xl font-bold lg:pt-0 ${textColorConfig}`}>
                         <TypeIt
                             getBeforeInit={(instance) => {
                                 instance
@@ -35,7 +35,7 @@ const Home = () => {
                             }}
                         />
                     </p>
-                    <p className={`pt-4 text-3xl xl:text-4xl font-bold ${textColorConfig}`}>
+                    <p className={`pt-4 text-3xl font-bold xl:text-4xl ${textColorConfig}`}>
                         <TypeIt
                             getBeforeInit={(instance) => {
                                 instance
@@ -75,7 +75,7 @@ const Home = () => {
                             }}
                         />
                     </p>
-                    <p className={`pt-4 lg:mr-8 text-base lg:text-lg ${textColorConfig}`}>
+                    <p className={`pt-4 text-base lg:mr-8 lg:text-lg ${textColorConfig}`}>
                         Tokyo based react/react native developer with over 5 years of experience in
                         this field.
                     </p>

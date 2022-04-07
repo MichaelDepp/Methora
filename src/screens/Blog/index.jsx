@@ -64,7 +64,7 @@ const Blog = () => {
             <motion.div
                 ref={ref}
                 animate={animation}
-                className="py-8 lg:py-16 justify-items-center grid grid-rows-1 gap-8 lg:grid-cols-3 lg:gap-16">
+                className="grid grid-rows-1 justify-items-center gap-8 py-8 lg:grid-cols-3 lg:gap-16 lg:py-16">
                 {blogData.map((data, key) => (
                     <BlogCard key={key} {...data} />
                 ))}

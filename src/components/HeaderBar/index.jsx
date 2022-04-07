@@ -47,7 +47,7 @@ const HeaderBar = (props) => {
             <div
                 onMouseEnter={() => setBarHover(true)}
                 onMouseLeave={() => setBarHover(false)}
-                className="fixed z-50 top-0 w-full flex items-center justify-between flex-wrap lg:bg-theme-lightBg/90 dark:lg:bg-theme-bg/90">
+                className="fixed top-0 z-50 flex w-full flex-wrap items-center justify-between lg:bg-theme-lightBg/90 dark:lg:bg-theme-bg/90">
                 <div className="lg:invisible">
                     <Hamburger
                         color={constants.colors.theme.primary}
@@ -56,7 +56,7 @@ const HeaderBar = (props) => {
                         toggle={setOpen}
                     />
                 </div>
-                <motion.div animate={animation} className="grid-flow-col gap-16 hidden lg:grid">
+                <motion.div animate={animation} className="hidden grid-flow-col gap-16 lg:grid">
                     {pages.map((page, key) => {
                         const colorCofig =
                             props.currentPage === page
@@ -66,7 +66,7 @@ const HeaderBar = (props) => {
                             <Link key={key} href={`#${page.toLowerCase()}`}>
                                 <p
                                     onClick={() => props.setCurrentPage(page)}
-                                    className={`${colorCofig} font-bold text-lg hover:text-theme-primary dark:hover:text-theme-primary cursor-pointer`}>
+                                    className={`${colorCofig} cursor-pointer text-lg font-bold hover:text-theme-primary dark:hover:text-theme-primary`}>
                                     {upperFirst(page)}
                                 </p>
                             </Link>

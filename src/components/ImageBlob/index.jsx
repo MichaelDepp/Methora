@@ -2,9 +2,9 @@ import React from 'react';
 
 const ImageBlob = (props) => {
     return (
-        <div className="bg-theme-primary w-64 h-64 lg:w-96 lg:h-96 rounded-full animate-blob shadow-2xl">
+        <div className="h-64 w-64 animate-blob rounded-full bg-theme-primary shadow-2xl lg:h-96 lg:w-96">
             <img
-                className="object-contain w-64 h-64 lg:w-96 lg:h-96 rounded-full"
+                className="h-64 w-64 rounded-full object-contain lg:h-96 lg:w-96"
                 src={props.image}
                 // src="https://randomuser.me/api/portraits/women/81.jpg"
                 alt="user image"

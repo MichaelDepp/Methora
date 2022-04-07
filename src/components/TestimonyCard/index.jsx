@@ -4,20 +4,20 @@ import constants from '../../constants';
 
 const TestimonyCard = (props) => {
     return (
-        <div className="max-w-sm h-80 bg-gray-200 dark:bg-theme-darkLight text-theme-bg dark:text-theme-lightBg grid grid-rows-3">
-            <div className="rounded-t-lg row-span-2 grid content-around px-4">
+        <div className="grid h-80 max-w-sm grid-rows-3 bg-gray-200 text-theme-bg dark:bg-theme-darkLight dark:text-theme-lightBg">
+            <div className="row-span-2 grid content-around rounded-t-lg px-4">
                 <FaQuoteLeft size={38} color={constants.colors.theme.primary} />
-                <p className="font-bold text-xl">{props.testimony}</p>
+                <p className="text-xl font-bold">{props.testimony}</p>
             </div>
-            <div className="rounded-b-lg row-span-1 grid grid-flow-col content-center gap-4 justify-start px-4">
+            <div className="row-span-1 grid grid-flow-col content-center justify-start gap-4 rounded-b-lg px-4">
                 <img
-                    className="object-cover w-14 h-14 rounded-full"
+                    className="h-14 w-14 rounded-full object-cover"
                     src={props.image}
                     alt="user image"
                 />
                 <div className="my-auto">
-                    <h3 className="font-bold text-md">{props.name}</h3>
-                    <p className="font-bold text-xs">{props.position}</p>
+                    <h3 className="text-md font-bold">{props.name}</h3>
+                    <p className="text-xs font-bold">{props.position}</p>
                 </div>
             </div>
         </div>

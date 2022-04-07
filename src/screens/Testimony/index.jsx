@@ -95,7 +95,7 @@ const Testimony = () => {
         nextArrow: <ArrowRight />,
         customPaging: (index) => {
             const pagingColor = index === currentSlide ? 'bg-theme-primary' : 'bg-theme-primary/40';
-            return <div className={`${pagingColor} w-2 h-2 rounded-full mt-4`} />;
+            return <div className={`${pagingColor} mt-4 h-2 w-2 rounded-full`} />;
         },
         responsive: [
             {

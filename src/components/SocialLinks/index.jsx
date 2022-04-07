@@ -13,7 +13,7 @@ const SocialLink = () => {
     const onClickIcon = (link) => window.open(link);
 
     return (
-        <div className="flex flex-row justify-between my-8 mx-16 lg:mx-0 lg:mr-32">
+        <div className="my-8 mx-16 flex flex-row justify-between lg:mx-0 lg:mr-32">
             <AiOutlineTwitter
                 size={18}
                 className={iconStyle}

@@ -45,15 +45,15 @@ const Contact = () => {
             </div>
             <div
                 ref={ref}
-                className="pt-16 lg:pt-0 lg:pb-8 justify-items-center grid grid-flow-row lg:grid-cols-2 gap-8 lg:gap-2 place-content-center h-4/5">
+                className="grid h-4/5 grid-flow-row place-content-center justify-items-center gap-8 pt-16 lg:grid-cols-2 lg:gap-2 lg:pt-0 lg:pb-8">
                 <motion.div animate={animation} className="flex justify-center">
                     <ImageBlob image={'./assets/memoji-contact.webp'} />
                 </motion.div>
                 <motion.div
                     animate={formAnimation}
-                    className="text-center lg:text-left lg:row-end-1 lg:my-auto">
-                    <h3 className="text-theme-primary text-xl lg:text-3xl font-bold">{`Let's Talk`}</h3>
-                    <p className="text-theme-bg dark:text-theme-lightBg text-sm lg:text-base pt-2 leading-4 max-w-md">
+                    className="text-center lg:row-end-1 lg:my-auto lg:text-left">
+                    <h3 className="text-xl font-bold text-theme-primary lg:text-3xl">{`Let's Talk`}</h3>
+                    <p className="max-w-md pt-2 text-sm leading-4 text-theme-bg dark:text-theme-lightBg lg:text-base">
                         {
                             'To request a quote or want to meet up for coffee, contact us directly or fill out the form and I will get back to you promptly.'
                         }

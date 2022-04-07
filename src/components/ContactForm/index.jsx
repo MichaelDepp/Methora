@@ -18,7 +18,7 @@ const ContactForm = () => {
 
     return (
         <>
-            <form className="max-w-md justify-items-center grid grid-flow-row gap-4">
+            <form className="grid max-w-md grid-flow-row justify-items-center gap-4">
                 <input
                     type="text"
                     placeholder="Name"
@@ -40,7 +40,7 @@ const ContactForm = () => {
                     className={`${inputStyleConfig} p-4 pt-2 pl-4 lg:p-8 lg:pl-4 lg:pt-4`}
                 />
             </form>
-            <div className="flex justify-center lg:justify-start pt-4 pb-8">
+            <div className="flex justify-center pt-4 pb-8 lg:justify-start">
                 <Button text={'Submit'} onClick={onSubmitForm} />
             </div>
         </>
