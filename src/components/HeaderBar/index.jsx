@@ -11,20 +11,19 @@ import Drawer from '../Drawer';
 import constants from '../../constants';
 import LinkPage from '../LinkPage';
 
-const HeaderBar = () => {
+const HeaderBar = (props) => {
     const [isOpen, setOpen] = useState(false);
-    const [currentPage, setCurrentPage] = useState('home');
     const [barHover, setBarHover] = useState(false);
     const { theme, setTheme } = useTheme();
     const animation = useAnimation();
 
     useEffect(() => {
-        if (currentPage === 'home') {
+        if (props.currentPage === 'home') {
             animation.start({
                 y: 0,
                 transition: { duration: 0.5, ease: 'easeIn' }
             });
-        } else if (currentPage !== 'home' && barHover) {
+        } else if (props.currentPage !== 'home' && barHover) {
             animation.start({
                 y: 0,
                 transition: { duration: 0.5, ease: 'easeIn' }
@@ -35,7 +34,7 @@ const HeaderBar = () => {
                 transition: { duration: 0.5, ease: 'easeOut' }
             });
         }
-    }, [barHover, currentPage]);
+    }, [barHover, props.currentPage]);
 
     const onSwitchTheme = (mode) => setTheme(mode);
 
@@ -60,13 +59,13 @@ const HeaderBar = () => {
                 <motion.div animate={animation} className="grid-flow-col gap-16 hidden lg:grid">
                     {pages.map((page, key) => {
                         const colorCofig =
-                            currentPage === page
+                            props.currentPage === page
                                 ? 'text-theme-primary'
                                 : 'text-theme-bg dark:text-theme-lightBg';
                         return (
                             <Link key={key} href={`#${page.toLowerCase()}`}>
                                 <p
-                                    onClick={() => setCurrentPage(page)}
+                                    onClick={() => props.setCurrentPage(page)}
                                     className={`${colorCofig} font-bold text-lg hover:text-theme-primary dark:hover:text-theme-primary cursor-pointer`}>
                                     {upperFirst(page)}
                                 </p>
