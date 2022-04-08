@@ -14,7 +14,8 @@ const ContactForm = () => {
     };
 
     const inputStyleConfig =
-        'input text-sm bg-gray-200 dark:bg-theme-darkLight w-full rounded-lg placeholder-theme-bg/80 dark:placeholder-theme-lightBg/80 outline-theme-primary dark:outline-theme-primary';
+        'input text-sm bg-gray-200 dark:bg-theme-darkLight w-full rounded-lg' +
+        'placeholder-theme-bg/80 dark:placeholder-theme-lightBg/80 outline-theme-primary dark:outline-theme-primary';
 
     return (
         <>
