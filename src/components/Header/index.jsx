@@ -11,7 +11,7 @@ import Drawer from '../Drawer';
 import constants from '../../constants';
 import LinkPage from '../LinkPage';
 
-const HeaderBar = (props) => {
+const Header = (props) => {
     const [isOpen, setOpen] = useState(false);
     const [barHover, setBarHover] = useState(false);
     const { theme, setTheme } = useTheme();
@@ -100,4 +100,4 @@ const HeaderBar = (props) => {
     );
 };
 
-export default HeaderBar;
+export default Header;
