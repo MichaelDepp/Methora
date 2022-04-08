@@ -2,20 +2,25 @@ import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { useInView } from 'react-intersection-observer';
 
+// Screen imports
 import Blog from 'screens/Blog';
 import Contact from 'screens/Contact';
 import Home from 'screens/Home';
 import Skills from 'screens/Skills';
 import Testimony from 'screens/Testimony';
 import Portfolio from 'screens/Portfolio';
-import HeaderBar from 'components/HeaderBar';
+
+// Component imports
+import Header from 'components/Header';
 import Spinner from 'components/Spinner';
 import Footer from 'components/Footer';
 
 const Index = () => {
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [currentPage, setCurrentPage] = useState('home');
     const [ref, inView] = useInView({
+        // The threshold can be adjusted, this to control the starting point of a viewport
+        // You can get more infromation from here https://github.com/thebuilder/react-intersection-observer#api
         threshold: 0.8
     });
     const [ref2, inView2] = useInView({
@@ -34,10 +39,14 @@ const Index = () => {
         threshold: 0.8
     });
 
+    // This loding state can be used if you fetch data or get response from an api
     useEffect(() => {
-        setTimeout(() => setLoading(true), 2000);
+        // We've added timeout time to 2 seconds
+        setTimeout(() => setLoading(false), 2000);
     }, []);
 
+    // The inView hooks is being used to observe which section is being showed in the viewport
+    // This to enable the headerBar's active section color changes while user scroll the page
     useEffect(() => {
         if (inView) {
             setCurrentPage('home');
@@ -64,29 +73,45 @@ const Index = () => {
             <Head>
                 <title>Methora Portfolio Theme - Confetti Themes</title>
             </Head>
-            {!loading ? (
+            {/*The spinner will be displayed conditionally according to the loading state */}
+            {loading ? (
                 <Spinner color="bg-theme-primary" />
             ) : (
                 <div className="relative">
+                    {/*Home Section*/}
                     <div ref={ref}>
                         <Home />
                     </div>
+
+                    {/*Skills Section*/}
                     <div ref={ref2}>
                         <Skills />
                     </div>
+
+                    {/*Portfolio Section*/}
                     <div ref={ref3}>
                         <Portfolio />
                     </div>
+
+                    {/*Testimony Section*/}
                     <div ref={ref4}>
                         <Testimony />
                     </div>
+
+                    {/*Blog Section*/}
                     <div ref={ref5}>
                         <Blog />
                     </div>
+
+                    {/*Contact Section*/}
                     <div ref={ref6}>
                         <Contact />
                     </div>
-                    <HeaderBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
+
+                    {/*Header Section*/}
+                    <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+
+                    {/*Footer Section*/}
                     <Footer />
                 </div>
             )}
