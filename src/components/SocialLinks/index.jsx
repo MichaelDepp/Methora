@@ -22,17 +22,17 @@ const SocialLink = () => {
             <AiOutlineGithub
                 size={18}
                 className={iconStyle}
-                onClick={() => onClickIcon('https://twitter.com/NASA')}
+                onClick={() => onClickIcon('https://github.com/nasa')}
             />
             <AiFillLinkedin
                 size={18}
                 className={iconStyle}
-                onClick={() => onClickIcon('https://twitter.com/NASA')}
+                onClick={() => onClickIcon('https://www.linkedin.com/company/nasa/')}
             />
             <AiOutlineDribbble
                 size={18}
                 className={iconStyle}
-                onClick={() => onClickIcon('https://twitter.com/NASA')}
+                onClick={() => onClickIcon('https://dribbble.com/tags/nasa')}
             />
         </div>
     );
