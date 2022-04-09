@@ -77,7 +77,7 @@ const Portfolio = () => {
             case 'Flutter':
                 setDisplayData(portfolioData.flutter);
                 break;
-            case 'Ui Design':
+            case 'UI Design':
                 setDisplayData(portfolioData.uiDesign);
                 break;
             default:
@@ -94,8 +94,8 @@ const Portfolio = () => {
                 <Chip name={'All'} selected={activeChip === 'All'} onClick={onClickChip} />
                 <Chip name={'Flutter'} selected={activeChip === 'Flutter'} onClick={onClickChip} />
                 <Chip
-                    name={'Ui Design'}
-                    selected={activeChip === 'Ui Design'}
+                    name={'UI Design'}
+                    selected={activeChip === 'UI Design'}
                     onClick={onClickChip}
                 />
             </div>

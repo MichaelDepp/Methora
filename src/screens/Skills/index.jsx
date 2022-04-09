@@ -46,7 +46,7 @@ const Skills = () => {
                     <ProgressBar custom={2} skillName={'React Native'} percentage={90} />
                     <ProgressBar custom={3} skillName={'Machine Learning'} percentage={45} />
                     <ProgressBar custom={4} skillName={'Python'} percentage={85} />
-                    <ProgressBar custom={5} skillName={'Ui Design'} percentage={90} />
+                    <ProgressBar custom={5} skillName={'UI Design'} percentage={90} />
                 </ContentWrapper>
             </div>
         </Container>

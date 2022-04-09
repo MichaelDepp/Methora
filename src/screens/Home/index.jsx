@@ -50,7 +50,7 @@ const Home = () => {
                                     .type("I'm an")
                                     .pause(1000)
                                     .type(
-                                        '<strong class="text-theme-primary"> Ui Desingr</strong>',
+                                        '<strong class="text-theme-primary"> UI Desingr</strong>',
                                         { delay: 1000 }
                                     )
                                     .delete(3)
