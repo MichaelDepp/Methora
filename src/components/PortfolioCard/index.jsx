@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 
-const PortfolioCard = ({ imageSrc, onClick, title }) => {
+const PortfolioCard = ({ imageSrc, link, title }) => {
     const [isHovered, setHovered] = useState(false);
     return (
         <a
-            onClick={onClick}
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}>
             <div className="absolute grid h-80 w-64 cursor-pointer content-center rounded-lg duration-300 hover:bg-theme-primary/80 lg:h-112 lg:w-80">
