@@ -129,7 +129,7 @@ const Testimony = () => {
             <div className="pt-8">
                 <HeaderTitle title={'Testimony'} />
             </div>
-            <motion.div ref={ref} animate={animation} className="py-16 lg:py-20">
+            <motion.div ref={ref} animate={animation} className="py-16">
                 <Slider {...settings}>
                     {testimonyData.map((data, key) => (
                         <TestimonyCard key={key} {...data} />
