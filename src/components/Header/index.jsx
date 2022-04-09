@@ -14,21 +14,25 @@ import LinkPage from '../LinkPage';
 const Header = (props) => {
     const [isOpen, setOpen] = useState(false);
     const [barHover, setBarHover] = useState(false);
+    const [barVisible, setBarVisible] = useState(false);
     const { theme, setTheme } = useTheme();
     const animation = useAnimation();
 
     useEffect(() => {
         if (props.currentPage === 'home') {
+            setBarVisible(true);
             animation.start({
                 y: 0,
                 transition: { duration: 0.5, ease: 'easeIn' }
             });
         } else if (props.currentPage !== 'home' && barHover) {
+            setBarVisible(true);
             animation.start({
                 y: 0,
                 transition: { duration: 0.5, ease: 'easeIn' }
             });
         } else {
+            setBarVisible(false);
             animation.start({
                 y: -100,
                 transition: { duration: 0.5, ease: 'easeOut' }
@@ -42,12 +46,16 @@ const Header = (props) => {
 
     const pages = ['home', 'skills', 'portfolio', 'testimony', 'blog', 'contact'];
 
+    const barOverlayConfig = barVisible
+        ? 'transition-colors duration-500 ease-in lg:bg-theme-lightBg/90 dark:lg:bg-theme-bg/90'
+        : 'transition-colors duration-100 ease-out bg-none';
+
     return (
         <>
             <div
                 onMouseEnter={() => setBarHover(true)}
                 onMouseLeave={() => setBarHover(false)}
-                className="fixed top-0 z-50 flex w-full flex-wrap items-center justify-between lg:bg-theme-lightBg/90 dark:lg:bg-theme-bg/90">
+                className={`fixed top-0 z-50 flex w-full flex-wrap items-center justify-between ${barOverlayConfig}`}>
                 <div className="lg:invisible">
                     <Hamburger
                         color={constants.colors.theme.primary}
