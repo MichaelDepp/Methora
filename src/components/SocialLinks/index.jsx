@@ -10,29 +10,27 @@ const SocialLink = () => {
     const iconStyle =
         'cursor-pointer text-theme-dark dark:text-theme-lightBg hover:text-theme-primary lg:hover:text-theme-primary';
 
-    const onClickIcon = (link) => window.open(link);
-
     return (
         <div className="my-8 mx-16 flex flex-row justify-between lg:mx-0 lg:mr-32">
             <AiOutlineTwitter
                 size={18}
                 className={iconStyle}
-                onClick={() => onClickIcon('https://twitter.com/NASA')}
+                onClick={() => window.open('https://twitter.com/NASA')}
             />
             <AiOutlineGithub
                 size={18}
                 className={iconStyle}
-                onClick={() => onClickIcon('https://github.com/nasa')}
+                onClick={() => window.open('https://github.com/nasa')}
             />
             <AiFillLinkedin
                 size={18}
                 className={iconStyle}
-                onClick={() => onClickIcon('https://www.linkedin.com/company/nasa/')}
+                onClick={() => window.open('https://www.linkedin.com/company/nasa/')}
             />
             <AiOutlineDribbble
                 size={18}
                 className={iconStyle}
-                onClick={() => onClickIcon('https://dribbble.com/tags/nasa')}
+                onClick={() => window.open('https://dribbble.com/tags/nasa')}
             />
         </div>
     );
