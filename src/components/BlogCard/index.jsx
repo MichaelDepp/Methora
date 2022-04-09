@@ -32,7 +32,7 @@ const BlogCard = ({ title, description, imageSrc, link }) => {
             rel="noopener noreferrer"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}>
-            <div className="w-full overflow-hidden">
+            <div className="w-full overflow-hidden rounded-lg">
                 <motion.img
                     animate={animation}
                     src={imageSrc}
