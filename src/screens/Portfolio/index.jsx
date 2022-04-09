@@ -65,6 +65,11 @@ const Portfolio = () => {
 
     const onClickChip = (name) => {
         setActiveChip(name);
+        animation.start({
+            transition: { duration: 1, ease: 'easeIn' },
+            opacity: [0, 1],
+            x: ['-5%', '0%']
+        });
         switch (name) {
             case 'All':
                 setDisplayData([...portfolioData.flutter, ...portfolioData.uiDesign]);
