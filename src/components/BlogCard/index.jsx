@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 
-const BlogCard = ({ title, description, imageSrc }) => {
+const BlogCard = ({ title, description, imageSrc, link }) => {
     const [isHovered, setHovered] = useState(false);
     const animation = useAnimation();
 
@@ -23,10 +23,13 @@ const BlogCard = ({ title, description, imageSrc }) => {
     const textHoverConfig = 'text-theme-bg dark:text-theme-bg';
 
     return (
-        <div
-            className={`h-96 w-64 overflow-hidden rounded-lg bg-gray-200 text-theme-bg shadow-sm
+        <a
+            className={`h-96 w-64 cursor-pointer overflow-hidden rounded-lg bg-gray-200 text-theme-bg shadow-sm
                 transition-colors duration-700 ease-in-out dark:bg-theme-darkLight dark:text-theme-lightBg lg:h-112 lg:w-80 ${bgColorConfig}
             `}
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}>
             <div className="w-full overflow-hidden">
@@ -38,16 +41,10 @@ const BlogCard = ({ title, description, imageSrc }) => {
                 />
             </div>
             <div className={`px-5 py-3 leading-none lg:py-5 ${isHovered && textHoverConfig}`}>
-                <a
-                    href="/"
-                    aria-label="Category"
-                    title="Simple is better"
-                    className="mb-2 text-lg font-bold line-clamp-2 lg:mb-4 lg:text-xl">
-                    {title}
-                </a>
+                <h3 className="mb-2 text-lg font-bold line-clamp-2 lg:mb-4 lg:text-xl">{title}</h3>
                 <p className="mb-2 text-sm line-clamp-4">{description}</p>
             </div>
-        </div>
+        </a>
     );
 };
 
