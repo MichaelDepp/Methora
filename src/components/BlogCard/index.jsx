@@ -36,7 +36,7 @@ const BlogCard = ({ title, description, imageSrc, link }) => {
                 <motion.img
                     animate={animation}
                     src={imageSrc}
-                    className="h-64 w-full object-cover"
+                    className="h-64 w-full rounded-lg object-cover"
                     alt={title}
                 />
             </div>
