@@ -21,22 +21,22 @@ const Index = () => {
     const [ref, inView] = useInView({
         // The threshold can be adjusted, this to control the starting point of a viewport
         // You can get more infromation from here https://github.com/thebuilder/react-intersection-observer#api
-        threshold: 0.8
+        threshold: 0.5
     });
     const [ref2, inView2] = useInView({
-        threshold: 0.8
+        threshold: 0.5
     });
     const [ref3, inView3] = useInView({
-        threshold: 0.8
+        threshold: 0.5
     });
     const [ref4, inView4] = useInView({
-        threshold: 0.8
+        threshold: 0.5
     });
     const [ref5, inView5] = useInView({
-        threshold: 0.8
+        threshold: 0.5
     });
     const [ref6, inView6] = useInView({
-        threshold: 0.8
+        threshold: 0.5
     });
 
     // This loding state can be used if you fetch data or get response from an api
