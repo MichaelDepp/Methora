@@ -1,11 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import BlogCard from 'components/BlogCard';
 import Container from 'components/Container';
 import HeaderTitle from 'components/HeaderTitle';
+import Modal from 'components/Modal';
 
 const Blog = () => {
+    const [isOpen, setIsOpen] = useState(false);
     const { ref, inView } = useInView();
     const animation = useAnimation();
 
@@ -60,6 +62,8 @@ const Blog = () => {
         }
     ];
 
+    const onClickBlog = (data) => setIsOpen(true);
+
     return (
         <Container id="blog" fullScreen={false}>
             <div className="pt-8">
@@ -70,9 +74,12 @@ const Blog = () => {
                 animate={animation}
                 className="grid grid-rows-1 justify-items-center gap-8 py-8 lg:grid-cols-3 lg:gap-16 lg:py-16">
                 {blogData.map((data, key) => (
-                    <BlogCard key={key} {...data} />
+                    <BlogCard key={key} {...data} onClick={() => onClickBlog(data)} />
                 ))}
             </motion.div>
+            <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
+                <img src="https://images.pexels.com/photos/5952738/pexels-photo-5952738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+            </Modal>
         </Container>
     );
 };

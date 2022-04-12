@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 
-const BlogCard = ({ title, description, imageSrc, link }) => {
+const BlogCard = ({ title, description, imageSrc, link, onClick }) => {
     const [isHovered, setHovered] = useState(false);
     const animation = useAnimation();
 
@@ -27,9 +27,10 @@ const BlogCard = ({ title, description, imageSrc, link }) => {
             className={`z-50 h-96 w-64 cursor-pointer overflow-hidden rounded-lg bg-gray-200 text-theme-bg shadow-sm
                 transition-colors duration-700 ease-in-out dark:bg-theme-darkLight dark:text-theme-lightBg lg:h-112 lg:w-80 ${bgColorConfig}
             `}
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={onClick}
+            // href={link}
+            // target="_blank"
+            // rel="noopener noreferrer"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}>
             <div className="w-full overflow-hidden">
