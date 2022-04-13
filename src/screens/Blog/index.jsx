@@ -33,7 +33,7 @@ const Blog = () => {
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer efficitur, mauris eget rutrum maximus, enim dui interdum',
             imageSrc:
-                'https://images.pexels.com/photos/5496463/pexels-photo-5496463.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                'https://images.pexels.com/photos/1181288/pexels-photo-1181288.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
             link: 'https://dev.to/david_ojeda/road-to-aws-certification-2438'
         },
         {
@@ -41,7 +41,7 @@ const Blog = () => {
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer efficitur, mauris eget rutrum maximus, enim dui interdum',
             imageSrc:
-                'https://images.pexels.com/photos/1181288/pexels-photo-1181288.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                'https://images.pexels.com/photos/5496463/pexels-photo-5496463.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
             link: 'https://dev.to/david_ojeda/road-to-aws-certification-2438'
         },
         {
