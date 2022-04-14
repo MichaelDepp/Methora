@@ -55,7 +55,7 @@ const Header = (props) => {
             <div
                 onMouseEnter={() => setBarHover(true)}
                 onMouseLeave={() => setBarHover(false)}
-                className={`fixed top-0 z-50 flex w-full flex-wrap items-center justify-between ${barOverlayConfig}`}>
+                className={`fixed top-0 z-40 flex w-full flex-wrap items-center justify-between ${barOverlayConfig}`}>
                 <div className="lg:invisible">
                     <Hamburger
                         color={constants.colors.theme.primary}
