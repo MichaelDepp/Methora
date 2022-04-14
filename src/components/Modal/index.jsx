@@ -1,40 +1,32 @@
-import React, { useEffect } from 'react';
-import { useAnimation, motion } from 'framer-motion';
+import React from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { RiCloseCircleLine } from 'react-icons/ri';
 
 const Modal = (props) => {
-    const animation = useAnimation();
-
-    useEffect(() => {
-        if (props.isOpen) {
-            animation.start({
-                scale: 1,
-                transition: { duration: 0.5, ease: 'easeIn' }
-            });
-        } else {
-            animation.start({
-                scale: 0,
-                transition: { duration: 0.5, ease: 'easeOut' }
-            });
-        }
-    }, [props.isOpen]);
-
     const iconColorConfig =
-        'text-theme-bg dark:text-theme-lightBg hover:text-theme-primary hover:dark:text-theme-primary';
+        'text-theme-lightBg hover:text-theme-primary hover:dark:text-theme-primary';
+
+    const closeModal = () => props.setIsOpen(false);
 
     return (
-        <motion.div
-            animate={animation}
-            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform overflow-auto bg-theme-lightBg dark:bg-theme-bg">
-            <>
-                <RiCloseCircleLine
-                    className={`absolute right-2 top-2 cursor-pointer ${iconColorConfig}`}
-                    size={22}
-                    onClick={() => props.setIsOpen(false)}
-                />
-                {props.children}
-            </>
-        </motion.div>
+        <AnimatePresence>
+            {props.isOpen && (
+                <div
+                    onClick={closeModal}
+                    className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-theme-bg/70 transition-opacity">
+                    <motion.div className="absolute overflow-auto p-8 transition-opacity">
+                        <>
+                            <RiCloseCircleLine
+                                className={`absolute right-2 top-2 cursor-pointer ${iconColorConfig}`}
+                                size={22}
+                                onClick={closeModal}
+                            />
+                            {props.children}
+                        </>
+                    </motion.div>
+                </div>
+            )}
+        </AnimatePresence>
     );
 };
 
