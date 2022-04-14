@@ -14,7 +14,12 @@ const Modal = (props) => {
                 <div
                     onClick={closeModal}
                     className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-theme-bg/70 transition-opacity">
-                    <motion.div className="absolute overflow-auto p-8 transition-opacity">
+                    <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        exit={{ scale: 0 }}
+                        transition={{ duration: 0.3, ease: 'easeInOut' }}
+                        className="absolute overflow-auto p-8 transition-opacity">
                         <>
                             <RiCloseCircleLine
                                 className={`absolute right-2 top-2 cursor-pointer ${iconColorConfig}`}
