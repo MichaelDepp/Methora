@@ -22,7 +22,7 @@ const Modal = (props) => {
                         className="absolute max-w-6xl overflow-auto p-8 transition-opacity lg:h-4/5">
                         <>
                             <RiCloseCircleLine
-                                className={`absolute top-1 right-2 cursor-pointer ${iconColorConfig}`}
+                                className={`cursor-pointer ${iconColorConfig}`}
                                 size={22}
                                 onClick={closeModal}
                             />
