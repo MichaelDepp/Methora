@@ -8,6 +8,7 @@ import Modal from 'components/Modal';
 
 const Blog = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [modalImage, setModalImage] = useState('');
     const { ref, inView } = useInView();
     const animation = useAnimation();
 
@@ -62,7 +63,10 @@ const Blog = () => {
         }
     ];
 
-    const onClickBlog = (data) => setIsOpen(true);
+    const onClickBlog = (data) => {
+        setModalImage(data.imageSrc);
+        setIsOpen(true);
+    };
 
     return (
         <Container id="blog" fullScreen={false}>
@@ -78,7 +82,7 @@ const Blog = () => {
                 ))}
             </motion.div>
             <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
-                <img src="https://images.pexels.com/photos/5952738/pexels-photo-5952738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <img src={modalImage} className="h-full object-contain" />
             </Modal>
         </Container>
     );
