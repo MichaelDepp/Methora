@@ -13,16 +13,16 @@ const Modal = (props) => {
             {props.isOpen && (
                 <div
                     onClick={closeModal}
-                    className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-theme-bg/70 transition-opacity">
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-theme-bg/70 transition-opacity">
                     <motion.div
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         exit={{ scale: 0 }}
                         transition={{ duration: 0.3, ease: 'easeInOut' }}
-                        className="absolute overflow-auto p-8 transition-opacity">
+                        className="absolute max-w-6xl overflow-auto p-8 transition-opacity lg:h-4/5">
                         <>
                             <RiCloseCircleLine
-                                className={`absolute right-2 top-2 cursor-pointer ${iconColorConfig}`}
+                                className={`absolute top-1 right-2 cursor-pointer ${iconColorConfig}`}
                                 size={22}
                                 onClick={closeModal}
                             />
