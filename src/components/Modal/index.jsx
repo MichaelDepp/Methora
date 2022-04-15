@@ -19,7 +19,7 @@ const Modal = (props) => {
                         animate={{ scale: 1 }}
                         exit={{ scale: 0 }}
                         transition={{ duration: 0.3, ease: 'easeInOut' }}
-                        className="absolute max-w-6xl overflow-auto p-8 transition-opacity lg:h-4/5">
+                        className="absolute h-auto max-w-6xl overflow-auto p-8 transition-opacity lg:h-4/5">
                         <>
                             <RiCloseCircleLine
                                 className={`cursor-pointer ${iconColorConfig}`}
