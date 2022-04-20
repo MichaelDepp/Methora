@@ -107,7 +107,7 @@ const Blog = () => {
                 <img src={modalImage} className="h-full object-contain" />
             </ReactModal> */}
             <Modal isOpen={isOpen} closeModal={onCloseModal}>
-                <img src={modalImage} className="object-contain" />
+                <img src={modalImage} className="h-full object-contain" />
             </Modal>
         </Container>
     );
