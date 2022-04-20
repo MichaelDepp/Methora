@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import ReactModal from 'react-modal';
 
 import BlogCard from 'components/BlogCard';
 import Container from 'components/Container';
 import HeaderTitle from 'components/HeaderTitle';
 import Modal from 'components/Modal';
+import constants from '../../constants';
 
 const Blog = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -71,6 +73,24 @@ const Blog = () => {
 
     const onCloseModal = () => setIsOpen(false);
 
+    // Remove in future if not gonna use react modal
+    const customStyles = {
+        content: {
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+            background: 'green',
+            border: 'none'
+        },
+        overlay: {
+            backgroundColor: `${constants.colors.theme.bg}cc`,
+            zIndex: 50
+        }
+    };
+
     return (
         <Container id="blog" fullScreen={false}>
             <div className="pt-8">
@@ -84,8 +104,11 @@ const Blog = () => {
                     <BlogCard key={key} {...data} onClick={() => onClickBlog(data)} />
                 ))}
             </motion.div>
-            <Modal isOpen={isOpen} closeModal={onCloseModal}>
+            {/* <ReactModal isOpen={isOpen} onRequestClose={onCloseModal} style={customStyles}>
                 <img src={modalImage} className="object-contain" />
+            </ReactModal> */}
+            <Modal isOpen={isOpen} closeModal={onCloseModal}>
+                <img src={modalImage} className="object-contain lg:h-full" />
             </Modal>
         </Container>
     );
