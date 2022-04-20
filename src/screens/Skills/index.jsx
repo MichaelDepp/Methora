@@ -28,6 +28,29 @@ const Skills = () => {
         }
     }, [inView]);
 
+    const skillsData = [
+        {
+            name: 'Flutter',
+            percentage: 95
+        },
+        {
+            name: 'React Native',
+            percentage: 90
+        },
+        {
+            name: 'Machine Learning',
+            percentage: 45
+        },
+        {
+            name: 'Python',
+            percentage: 85
+        },
+        {
+            name: 'Ui Design',
+            percentage: 90
+        }
+    ];
+
     return (
         <Container id="skills">
             <div className="pt-8">
@@ -41,12 +64,10 @@ const Skills = () => {
                     className="flex justify-center lg:items-center lg:justify-end">
                     <ImageBlob image={'./assets/memoji-skills.webp'} />
                 </motion.div>
-                <ContentWrapper style={'w-full my-auto'}>
-                    <ProgressBar custom={1} skillName={'Flutter'} percentage={95} />
-                    <ProgressBar custom={2} skillName={'React Native'} percentage={90} />
-                    <ProgressBar custom={3} skillName={'Machine Learning'} percentage={45} />
-                    <ProgressBar custom={4} skillName={'Python'} percentage={85} />
-                    <ProgressBar custom={5} skillName={'UI Design'} percentage={90} />
+                <ContentWrapper style={'w-full px-2 lg:px-0 my-auto'}>
+                    {skillsData.map((data, key) => (
+                        <ProgressBar key={key} custom={key} {...data} />
+                    ))}
                 </ContentWrapper>
             </div>
         </Container>

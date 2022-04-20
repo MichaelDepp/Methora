@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const ProgressBar = ({ custom, skillName, percentage }) => {
+const ProgressBar = ({ custom, name, percentage }) => {
     const { ref, inView } = useInView();
     const progressBarAnimation = useAnimation();
     const opacityAnimation = useAnimation();
@@ -31,7 +31,7 @@ const ProgressBar = ({ custom, skillName, percentage }) => {
         }
     }, [inView]);
 
-    if (!skillName || !percentage) {
+    if (!name || !percentage) {
         return null;
     }
     return (
@@ -40,7 +40,7 @@ const ProgressBar = ({ custom, skillName, percentage }) => {
                 custom={custom}
                 animate={opacityAnimation}
                 className="font-regular text-base lg:text-lg">
-                {skillName}
+                {name}
             </motion.p>
             <motion.div
                 custom={custom}
