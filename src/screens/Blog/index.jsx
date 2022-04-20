@@ -80,7 +80,7 @@ const Blog = () => {
             bottom: 'auto',
             marginRight: '-50%',
             transform: 'translate(-50%, -50%)',
-            background: 'none',
+            background: 'green',
             border: 'none'
         },
         overlay: {
