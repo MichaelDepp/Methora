@@ -6,6 +6,7 @@ import ReactModal from 'react-modal';
 import BlogCard from 'components/BlogCard';
 import Container from 'components/Container';
 import HeaderTitle from 'components/HeaderTitle';
+import Modal from 'components/Modal';
 import constants from '../../constants';
 
 const Blog = () => {
@@ -102,9 +103,12 @@ const Blog = () => {
                     <BlogCard key={key} {...data} onClick={() => onClickBlog(data)} />
                 ))}
             </motion.div>
-            <ReactModal isOpen={isOpen} onRequestClose={onCloseModal} style={customStyles}>
+            {/* <ReactModal isOpen={isOpen} onRequestClose={onCloseModal} style={customStyles}>
                 <img src={modalImage} className="h-full object-contain" />
-            </ReactModal>
+            </ReactModal> */}
+            <Modal isOpen={isOpen} closeModal={onCloseModal}>
+                <img src={modalImage} className="object-contain" />
+            </Modal>
         </Container>
     );
 };

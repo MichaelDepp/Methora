@@ -6,13 +6,11 @@ const Modal = (props) => {
     const iconColorConfig =
         'text-theme-lightBg hover:text-theme-primary hover:dark:text-theme-primary';
 
-    const closeModal = () => props.setIsOpen(false);
-
     return (
         <AnimatePresence>
             {props.isOpen && (
                 <div
-                    onClick={closeModal}
+                    onClick={() => props.closeModal()}
                     className="fixed inset-0 z-50 flex items-center justify-center bg-theme-bg/70 transition-opacity">
                     <motion.div
                         initial={{ scale: 0 }}
@@ -24,7 +22,7 @@ const Modal = (props) => {
                             <RiCloseCircleLine
                                 className={`absolute top-1 right-2 cursor-pointer ${iconColorConfig}`}
                                 size={22}
-                                onClick={closeModal}
+                                onClick={() => props.closeModal()}
                             />
                             {props.children}
                         </>
