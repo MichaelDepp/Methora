@@ -58,7 +58,7 @@ const Skills = () => {
             </div>
             <div
                 ref={ref}
-                className="grid h-4/5 grid-flow-row content-center gap-8 pb-16 lg:grid-cols-2 lg:grid-rows-1 lg:content-end lg:gap-24 lg:pb-24">
+                className="grid h-4/5 grid-flow-row content-center gap-8 xxs:pb-0 xs:pb-16 lg:grid-cols-2 lg:grid-rows-1 lg:content-end lg:gap-24 lg:pb-24">
                 <motion.div
                     animate={animation}
                     className="flex justify-center lg:items-center lg:justify-end">
