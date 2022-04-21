@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -8,6 +8,7 @@ import HeaderTitle from 'components/HeaderTitle';
 import ImageBlob from 'components/ImageBlob';
 
 const Contact = () => {
+    const [width, setWidth] = useState(window.innerWidth);
     const { ref, inView } = useInView({
         threshold: 0.4
     });
@@ -38,8 +39,17 @@ const Contact = () => {
             });
         }
     }, [inView]);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWidth(window.innerWidth);
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [width]);
+
     return (
-        <Container id="contact">
+        <Container id="contact" fullScreen={width > 380}>
             <div className="pt-8">
                 <HeaderTitle title={'Contact'} />
             </div>
