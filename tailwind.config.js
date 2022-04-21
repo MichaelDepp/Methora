@@ -29,6 +29,12 @@ module.exports = {
             '10xl': '8rem'
         },
         screens: {
+            xxs: '280px',
+            // => @media (min-width: 280px) { ... }
+
+            xs: '380px',
+            // => @media (min-width: 280px) { ... }
+
             sm: '640px',
             // => @media (min-width: 640px) { ... }
 
