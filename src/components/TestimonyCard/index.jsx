@@ -7,7 +7,7 @@ const TestimonyCard = (props) => {
         <div className="grid h-80 max-w-sm grid-rows-3 bg-gray-200 text-theme-bg dark:bg-theme-darkLight dark:text-theme-lightBg">
             <div className="row-span-2 grid content-around rounded-t-lg px-4">
                 <FaQuoteLeft size={38} color={constants.colors.theme.primary} />
-                <p className="text-xl font-bold">{props.testimony}</p>
+                <p className="text-lg font-bold line-clamp-4 lg:text-xl">{props.testimony}</p>
             </div>
             <div className="row-span-1 grid grid-flow-col content-center justify-start gap-4 rounded-b-lg px-4">
                 <img
