@@ -3,13 +3,14 @@ import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 import BlogCard from 'components/BlogCard';
+import BlogPage from 'components/BlogPage';
 import Container from 'components/Container';
 import HeaderTitle from 'components/HeaderTitle';
 import Modal from 'components/Modal';
 
 const Blog = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [modalImage, setModalImage] = useState('');
+    const [selectedBlog, setSelectedBlog] = useState({});
     const { ref, inView } = useInView();
     const animation = useAnimation();
 
@@ -69,7 +70,7 @@ const Blog = () => {
     // Function when blog is clicked
     // This will trigger the modal and display the image
     const onClickBlog = (data) => {
-        setModalImage(data.imageSrc);
+        setSelectedBlog(data);
         setIsOpen(true);
     };
 
@@ -96,9 +97,14 @@ const Blog = () => {
             {/* End Blog Cards Section */}
 
             {/* Start Blog Modal Section */}
-            <Modal isOpen={isOpen} closeModal={onCloseModal}>
-                <img src={modalImage} className="object-contain lg:h-full" />
-            </Modal>
+            {selectedBlog && (
+                <Modal isOpen={isOpen} closeModal={onCloseModal}>
+                    <BlogPage {...selectedBlog} />
+                </Modal>
+            )}
+            {/* <Modal isOpen={isOpen} closeModal={onCloseModal}>
+                <img src={selectedBlog?.imageSrc} className="object-contain lg:h-full" />
+            </Modal> */}
             {/* End Blog Modal Section */}
         </Container>
     );
