@@ -7,7 +7,7 @@ const ContactForm = () => {
     const [message, setMessage] = useState('');
 
     const onSubmitForm = () => {
-        // TODO: make the values send
+        // Modify this function to get the form values
         console.log(name);
         console.log(email);
         console.log(message);
@@ -19,6 +19,7 @@ const ContactForm = () => {
 
     return (
         <>
+            {/* Start Form Area */}
             <form className="grid max-w-md grid-flow-row justify-items-center gap-4">
                 <input
                     type="text"
@@ -41,9 +42,13 @@ const ContactForm = () => {
                     className={`${inputStyleConfig} p-4 pt-2 pl-4 lg:p-8 lg:pl-4 lg:pt-4`}
                 />
             </form>
+            {/* End Form Area */}
+
+            {/* Start Submit Button */}
             <div className="flex justify-center pt-4 pb-8 lg:justify-start">
                 <Button text={'Submit'} onClick={onSubmitForm} />
             </div>
+            {/* Start Submit Button */}
         </>
     );
 };

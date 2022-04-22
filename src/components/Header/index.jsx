@@ -52,10 +52,12 @@ const Header = (props) => {
 
     return (
         <>
+            {/* Start Header Bar Section */}
             <div
                 onMouseEnter={() => setBarHover(true)}
                 onMouseLeave={() => setBarHover(false)}
                 className={`fixed top-0 z-40 flex w-full flex-wrap items-center justify-between ${barOverlayConfig}`}>
+                {/* Start Hamburger Section */}
                 <div className="lg:invisible">
                     <Hamburger
                         color={constants.colors.theme.primary}
@@ -64,6 +66,9 @@ const Header = (props) => {
                         toggle={setOpen}
                     />
                 </div>
+                {/* End Hamburger Section */}
+
+                {/* Start Header Page Link Section */}
                 <motion.div animate={animation} className="hidden grid-flow-col gap-16 lg:grid">
                     {pages.map((page, key) => {
                         const colorCofig =
@@ -74,13 +79,17 @@ const Header = (props) => {
                             <Link key={key} href={`#${page.toLowerCase()}`}>
                                 <p
                                     onClick={() => props.setCurrentPage(page)}
-                                    className={`${colorCofig} cursor-pointer text-lg font-bold hover:text-theme-primary dark:hover:text-theme-primary`}>
+                                    className={`${colorCofig} cursor-pointer text-lg font-bold
+                                    hover:text-theme-primary dark:hover:text-theme-primary`}>
                                     {upperFirst(page)}
                                 </p>
                             </Link>
                         );
                     })}
                 </motion.div>
+                {/* End Header Page Link Section */}
+
+                {/* Start Dark / Light Mode Toggle Section */}
                 <div className="p-3">
                     {theme === 'light' ? (
                         <RiMoonFill
@@ -96,7 +105,11 @@ const Header = (props) => {
                         />
                     )}
                 </div>
+                {/* Start Dark / Light Mode Toggle Section */}
             </div>
+            {/* End Header Bar Section */}
+
+            {/* Start Drawer Section */}
             <Drawer isOpen={isOpen} setIsOpen={setOpen}>
                 <div className="grid grid-flow-row gap-4">
                     {pages.map((page, key) => (
@@ -104,6 +117,7 @@ const Header = (props) => {
                     ))}
                 </div>
             </Drawer>
+            {/* End Drawer Section */}
         </>
     );
 };

@@ -9,9 +9,11 @@ const Modal = (props) => {
     return (
         <AnimatePresence>
             {props.isOpen && (
+                // Start Modal Background Section
                 <div
                     onClick={() => props.closeModal()}
                     className="fixed inset-0 z-50 flex items-center justify-center bg-theme-bg/70 transition-opacity">
+                    {/* Start Modal Content Section */}
                     <motion.div
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
@@ -19,15 +21,19 @@ const Modal = (props) => {
                         transition={{ duration: 0.3, ease: 'easeInOut' }}
                         className="absolute max-w-6xl overflow-auto p-8 transition-opacity lg:h-4/5">
                         <>
+                            {/* Start Close Button Section */}
                             <RiCloseCircleLine
                                 className={`absolute top-1 right-2 cursor-pointer ${iconColorConfig}`}
                                 size={22}
                                 onClick={() => props.closeModal()}
                             />
+                            {/* End Close Button Section */}
                             {props.children}
                         </>
                     </motion.div>
+                    {/* End Modal Content Section */}
                 </div>
+                // End Modal Background Section
             )}
         </AnimatePresence>
     );

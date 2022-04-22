@@ -28,6 +28,8 @@ const BlogCard = ({ title, description, imageSrc, link, onClick }) => {
                 transition-colors duration-700 ease-in-out dark:bg-theme-darkLight dark:text-theme-lightBg lg:h-112 lg:w-80 ${bgColorConfig}
             `}
             onClick={onClick}
+            // If you want to open a link, you can just use the below method
+            // and pass the link to the href
             // href={link}
             // target="_blank"
             // rel="noopener noreferrer"

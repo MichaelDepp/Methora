@@ -11,6 +11,7 @@ const Spinner = (props) => {
     const cubeTransitionConfig = { repeat: Infinity, ease: 'easeInOut', duration: 1.3 };
 
     return (
+        // Start Loader Cube Section
         <div className="absolute inset-0 m-auto grid h-12 w-12 grid-cols-3 grid-rows-3">
             <motion.div
                 className={cubeStyle}
@@ -76,6 +77,7 @@ const Spinner = (props) => {
                     ...cubeTransitionConfig
                 }}></motion.div>
         </div>
+        // End Loader Cube Section
     );
 };
 

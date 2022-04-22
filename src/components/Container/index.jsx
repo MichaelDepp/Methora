@@ -12,6 +12,7 @@ const Container = ({ children, fullScreen, id }) => {
     );
 };
 
+// By default the fullScreen will be true
 Container.defaultProps = {
     fullScreen: true
 };
