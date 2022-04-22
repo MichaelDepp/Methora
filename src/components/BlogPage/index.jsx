@@ -2,7 +2,7 @@ import React from 'react';
 
 const BlogPage = (props) => {
     return (
-        <div className="max-w-4xl overflow-auto bg-theme-lightBg p-4 dark:bg-theme-bg xxs:h-132 xs:h-140">
+        <div className="h-132 max-w-4xl overflow-auto bg-theme-lightBg p-4 dark:bg-theme-bg">
             <h2 className="text-xl font-bold leading-none line-clamp-3 lg:text-4xl">
                 {props.title}
             </h2>
