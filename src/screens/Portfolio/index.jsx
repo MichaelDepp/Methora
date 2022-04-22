@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+
 import Container from 'components/Container';
 import HeaderTitle from 'components/HeaderTitle';
 import PortfolioCard from 'components/PortfolioCard';
@@ -12,6 +13,7 @@ const Portfolio = () => {
     const { ref, inView } = useInView();
     const animation = useAnimation();
 
+    // Animation Configuration
     useEffect(() => {
         if (inView) {
             animation.start({
@@ -32,6 +34,7 @@ const Portfolio = () => {
         setDisplayData([...portfolioData.flutter, ...portfolioData.uiDesign]);
     }, []);
 
+    // Sample Portfolio Data
     const portfolioData = {
         flutter: [
             {
@@ -63,6 +66,8 @@ const Portfolio = () => {
         ]
     };
 
+    // Function when chip is clicked
+    // It will filter the content based on the selected chip
     const onClickChip = (name) => {
         setActiveChip(name);
         animation.start({
@@ -87,9 +92,13 @@ const Portfolio = () => {
 
     return (
         <Container id="portfolio" fullScreen={false}>
+            {/* Start Title Section */}
             <div className="pt-8">
                 <HeaderTitle title={'Portfolio'} />
             </div>
+            {/* End Title Section */}
+
+            {/* Start Chips Section */}
             <div className="grid grid-flow-col justify-center gap-4 pt-8 lg:pt-12">
                 <Chip name={'All'} selected={activeChip === 'All'} onClick={onClickChip} />
                 <Chip name={'Flutter'} selected={activeChip === 'Flutter'} onClick={onClickChip} />
@@ -99,6 +108,9 @@ const Portfolio = () => {
                     onClick={onClickChip}
                 />
             </div>
+            {/* End Chips Section */}
+
+            {/* Start Portfolio Cards Section */}
             <motion.div
                 ref={ref}
                 animate={animation}
@@ -107,6 +119,7 @@ const Portfolio = () => {
                     return <PortfolioCard key={key} {...data} />;
                 })}
             </motion.div>
+            {/* End Portfolio Cards Section */}
         </Container>
     );
 };

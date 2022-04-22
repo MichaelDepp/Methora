@@ -16,6 +16,7 @@ const Contact = () => {
     const animation = useAnimation();
     const formAnimation = useAnimation();
 
+    // Animation Configuration
     useEffect(() => {
         if (inView) {
             animation.start({
@@ -40,6 +41,8 @@ const Contact = () => {
         }
     }, [inView]);
 
+    // Function to get the screen width
+    // Used to handle the responsiveness of the design in smaller devices
     useEffect(() => {
         const handleResize = () => {
             setWidth(window.innerWidth);
@@ -50,15 +53,22 @@ const Contact = () => {
 
     return (
         <Container id="contact" fullScreen={width > 380}>
+            {/* Start Title Section */}
             <div className="pt-8">
                 <HeaderTitle title={'Contact'} />
             </div>
+            {/* Start End Section */}
+
             <div
                 ref={ref}
                 className="grid h-4/5 grid-flow-row place-content-center justify-items-center gap-8 pt-16 lg:grid-cols-2 lg:gap-2 lg:pt-0 lg:pb-8">
+                {/* Start Contact Image Section */}
                 <motion.div animate={animation} className="flex justify-center">
                     <ImageBlob image={'./assets/memoji-contact.webp'} />
                 </motion.div>
+                {/* End Contact Image Section */}
+
+                {/* Start Form Section */}
                 <motion.div
                     animate={formAnimation}
                     className="text-center lg:row-end-1 lg:my-auto lg:text-left">
@@ -72,6 +82,7 @@ const Contact = () => {
                         <ContactForm />
                     </div>
                 </motion.div>
+                {/* End Form Section */}
             </div>
         </Container>
     );

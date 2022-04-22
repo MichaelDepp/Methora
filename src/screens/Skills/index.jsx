@@ -14,6 +14,7 @@ const Skills = () => {
     });
     const animation = useAnimation();
 
+    // Animation Configuration
     useEffect(() => {
         if (inView) {
             animation.start({
@@ -28,6 +29,7 @@ const Skills = () => {
         }
     }, [inView]);
 
+    // Sample Skills Data
     const skillsData = [
         {
             name: 'Flutter',
@@ -53,22 +55,30 @@ const Skills = () => {
 
     return (
         <Container id="skills">
+            {/* Start Title Section */}
             <div className="pt-8">
                 <HeaderTitle title={'Skills'} />
             </div>
+            {/* End Title Section */}
+
             <div
                 ref={ref}
                 className="grid h-4/5 grid-flow-row content-center gap-8 xxs:pb-0 xs:pb-16 lg:grid-cols-2 lg:grid-rows-1 lg:content-end lg:gap-24 lg:pb-24">
+                {/* Start Skills Image Section */}
                 <motion.div
                     animate={animation}
                     className="flex justify-center lg:items-center lg:justify-end">
                     <ImageBlob image={'./assets/memoji-skills.webp'} />
                 </motion.div>
+                {/* End Skills Image Section */}
+
+                {/* Start Skill ProgressBars Section */}
                 <ContentWrapper style={'w-full px-2 lg:px-0 my-auto'}>
                     {skillsData.map((data, key) => (
                         <ProgressBar key={key} custom={key} {...data} />
                     ))}
                 </ContentWrapper>
+                {/* End Skill ProgressBars Section */}
             </div>
         </Container>
     );

@@ -1,5 +1,6 @@
 import React from 'react';
 import TypeIt from 'typeit-react';
+
 import Button from 'components/Button';
 import Container from 'components/Container';
 import ContentWrapper from 'components/ContentWrapper';
@@ -12,10 +13,15 @@ const Home = () => {
     return (
         <Container id="home">
             <div className="grid h-full grid-flow-row content-center lg:grid-flow-col lg:justify-center lg:gap-24">
+                {/* Start Home Image Section */}
                 <div className="flex justify-center">
                     <ImageBlob image={'./assets/memoji-home.png'} />
                 </div>
+                {/* Start Home Image Section */}
+
+                {/* Start Content Section */}
                 <ContentWrapper style={'max-w-sm text-center lg:text-left my-auto'}>
+                    {/* Start First Animated Typing Section */}
                     <p className={`pt-8 text-2xl font-bold lg:pt-0 ${textColorConfig}`}>
                         <TypeIt
                             getBeforeInit={(instance) => {
@@ -35,6 +41,9 @@ const Home = () => {
                             }}
                         />
                     </p>
+                    {/* End First Animated Typing Section */}
+
+                    {/* Start Second Animated Typing Section */}
                     <p className={`pt-4 text-3xl font-bold xl:text-4xl ${textColorConfig}`}>
                         <TypeIt
                             getBeforeInit={(instance) => {
@@ -75,15 +84,29 @@ const Home = () => {
                             }}
                         />
                     </p>
+                    {/* Start Second Animated Typing Section */}
+
+                    {/* Start Description Section */}
                     <p className={`pt-4 text-base lg:mr-8 lg:text-lg ${textColorConfig}`}>
                         Tokyo based react/react native developer with over 5 years of experience in
                         this field.
                     </p>
+                    {/* End Description Section */}
+
+                    {/* Start Social Links Section */}
                     <SocialLinks />
+                    {/* End Social Links Section */}
+
+                    {/* Start Download Button Section */}
                     <div className="flex justify-center lg:justify-start">
-                        <Button text={'Download Cv'} />
+                        <Button
+                            text={'Download Cv'}
+                            onClick={() => window.open('https://methora.vercel.app/')}
+                        />
                     </div>
+                    {/* End Download Button Section */}
                 </ContentWrapper>
+                {/* End Content Section */}
             </div>
         </Container>
     );

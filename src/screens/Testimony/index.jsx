@@ -3,17 +3,18 @@ import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Slider from 'react-slick';
 import { AiFillLeftCircle, AiFillRightCircle } from 'react-icons/ai';
-import constants from '../../constants';
 
 import Container from 'components/Container';
 import HeaderTitle from 'components/HeaderTitle';
 import TestimonyCard from 'components/TestimonyCard';
+import constants from '../../constants';
 
 const Testimony = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const { ref, inView } = useInView();
     const animation = useAnimation();
 
+    // Animation Configuration
     useEffect(() => {
         if (inView) {
             animation.start({
@@ -28,6 +29,7 @@ const Testimony = () => {
         }
     }, [inView]);
 
+    // Sample Testimony Data
     const testimonyData = [
         {
             name: 'Emily Aviv',
@@ -82,6 +84,7 @@ const Testimony = () => {
         />
     );
 
+    // Slick Slider Configurations
     const settings = {
         className: 'center',
         centerMode: true,
@@ -126,9 +129,13 @@ const Testimony = () => {
     };
     return (
         <Container id="testimony" fullScreen={false}>
+            {/* Start Title Section */}
             <div className="pt-8">
                 <HeaderTitle title={'Testimony'} />
             </div>
+            {/* End Title Section */}
+
+            {/* Start Testimonies Section */}
             <motion.div ref={ref} animate={animation} className="py-16">
                 <Slider {...settings}>
                     {testimonyData.map((data, key) => (
@@ -136,6 +143,7 @@ const Testimony = () => {
                     ))}
                 </Slider>
             </motion.div>
+            {/* End Testimonies Section */}
         </Container>
     );
 };
