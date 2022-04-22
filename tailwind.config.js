@@ -75,7 +75,10 @@ module.exports = {
             colors: constants.colors,
             height: {
                 112: '28rem',
-                128: '32rem'
+                128: '32rem',
+                132: '36rem',
+                136: '40rem',
+                140: '44rem'
             }
         }
     },
