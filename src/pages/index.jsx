@@ -70,49 +70,60 @@ const Index = () => {
 
     return (
         <>
+            {/* Start Head Section */}
             <Head>
                 <title>Methora Portfolio Theme - Confetti Themes</title>
             </Head>
+            {/* Start Head Section */}
+
             {/*The spinner will be displayed conditionally according to the loading state */}
             {loading ? (
                 <Spinner color="bg-theme-primary" />
             ) : (
                 <div className="relative">
-                    {/*Home Section*/}
+                    {/* Start Home Section */}
                     <div ref={ref}>
                         <Home />
                     </div>
+                    {/* End Home Section */}
 
-                    {/*Skills Section*/}
+                    {/*Start Skills Section */}
                     <div ref={ref2}>
                         <Skills />
                     </div>
+                    {/* End Skills Section */}
 
-                    {/*Portfolio Section*/}
+                    {/*Start Portfolio Section */}
                     <div ref={ref3}>
                         <Portfolio />
                     </div>
+                    {/* End Portfolio Section */}
 
-                    {/*Testimony Section*/}
+                    {/*Start Testimony Section */}
                     <div ref={ref4}>
                         <Testimony />
                     </div>
+                    {/* End Testimony Section */}
 
-                    {/*Blog Section*/}
+                    {/*Start Blog Section */}
                     <div ref={ref5}>
                         <Blog />
                     </div>
+                    {/* End Blog Section */}
 
-                    {/*Contact Section*/}
+                    {/* Start Contact Section */}
                     <div ref={ref6}>
                         <Contact />
                     </div>
+                    {/* End Contact Section */}
 
-                    {/*Header Section*/}
+                    {/* Start Header Section */}
                     <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+                    {/* End Header Section */}
 
-                    {/*Footer Section*/}
+                    {/* Start Footer Section */}
                     <Footer />
+                    {/* End Footer Section */}
                 </div>
             )}
         </>
