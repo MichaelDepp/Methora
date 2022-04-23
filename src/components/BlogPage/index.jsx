@@ -2,7 +2,7 @@ import React from 'react';
 
 const BlogPage = (props) => {
     return (
-        <div className="max-w-4xl h-132 overflow-auto bg-theme-lightBg p-4 dark:bg-theme-bg">
+        <div className="h-132 max-w-4xl overflow-auto bg-theme-lightBg p-4 dark:bg-theme-bg sm:h-full">
             <h2 className="text-xl font-bold leading-none line-clamp-3 lg:text-4xl">
                 {props.title}
             </h2>
@@ -21,6 +21,10 @@ const BlogPage = (props) => {
                         'faucibus nisl tincidunt eget nullam non. Lacus suspendisse faucibus interdum posuere lorem. Ipsum dolor sit amet consectetur ' +
                         'adipiscing elit. Ut sem nulla pharetra diam. In mollis nunc sed id semper risus in hendrerit. Magna fermentum iaculis eu non ' +
                         'diam phasellus vestibulum lorem. Faucibus ornare suspendisse sed nisi lacus. Quisque id diam vel quam elementum pulvinar etiam ' +
+                        'non quam. Quis varius quam quisque id diam vel. Lacinia quis vel eros donec ac odio tempor orci. Praesent elementum facilisis ' +
+                        'leo vel fringilla. Phasellus vestibulum lorem sed risus ultricies. Egestas pretium aenean pharetra magna. Mollis aliquam ut ' +
+                        'porttitor leo. Mi bibendum neque egestas congue quisque egestas diam. Nunc lobortis mattis aliquam faucibus purus in massa ' +
+                        'tempor nec. In fermentum posuere urna nec tincidunt praesent semper. Pulvinar sapien et ligula ullamcorper malesuada. In ' +
                         'non quam. Quis varius quam quisque id diam vel. Lacinia quis vel eros donec ac odio tempor orci. Praesent elementum facilisis ' +
                         'leo vel fringilla. Phasellus vestibulum lorem sed risus ultricies. Egestas pretium aenean pharetra magna. Mollis aliquam ut ' +
                         'porttitor leo. Mi bibendum neque egestas congue quisque egestas diam. Nunc lobortis mattis aliquam faucibus purus in massa ' +
