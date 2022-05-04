@@ -64,7 +64,7 @@ const Contact = () => {
                 className="grid h-4/5 grid-flow-row place-content-center justify-items-center gap-8 pt-16 lg:grid-cols-2 lg:gap-2 lg:pt-0 lg:pb-8">
                 {/* Start Contact Image Section */}
                 <motion.div animate={animation} className="flex justify-center">
-                    <ImageBlob image={'./assets/memoji-contact.webp'} />
+                    <ImageBlob image={'/./assets/memoji-contact.webp'} />
                 </motion.div>
                 {/* End Contact Image Section */}
 

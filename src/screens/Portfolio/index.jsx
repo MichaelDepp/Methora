@@ -39,28 +39,24 @@ const Portfolio = () => {
         flutter: [
             {
                 title: 'Food delivery app',
-                imageSrc:
-                    'https://cdn.dribbble.com/userupload/1808226/file/original-43fd0dc66317c79c4a827d41e2478a72.png',
+                imageSrc: '/./assets/portfolio/food-delivery-app.webp',
                 link: 'https://www.behance.net/gallery/115708047/Delivery-App?tracking_source=search_projects%7Cmobile%20app'
             },
             {
                 title: 'Uber app',
-                imageSrc:
-                    'https://cdn.dribbble.com/users/33073/screenshots/11863204/media/3f76f45cf65a050a4a952f98d5b31c5f.png',
+                imageSrc: '/./assets/portfolio/uber-app.png',
                 link: 'https://www.behance.net/gallery/115708047/Delivery-App?tracking_source=search_projects%7Cmobile%20app'
             }
         ],
         uiDesign: [
             {
                 title: 'Ecom Sneakers',
-                imageSrc:
-                    'https://cdn.dribbble.com/users/232800/screenshots/14385267/media/6748fd123e1025602b28fc1ed9174fd5.png',
+                imageSrc: '/./assets/portfolio/ecom-sneakers.png',
                 link: 'https://www.behance.net/gallery/115708047/Delivery-App?tracking_source=search_projects%7Cmobile%20app'
             },
             {
                 title: 'Music Application',
-                imageSrc:
-                    'https://cdn.dribbble.com/users/452635/screenshots/14276201/media/9a9dfb97b7525e2539eee882bd949a14.png',
+                imageSrc: '/./assets/portfolio/music-application.png',
                 link: 'https://www.behance.net/gallery/115708047/Delivery-App?tracking_source=search_projects%7Cmobile%20app'
             }
         ]
