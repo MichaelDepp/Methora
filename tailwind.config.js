@@ -9,8 +9,8 @@ module.exports = {
     darkMode: 'class',
     theme: {
         fontFamily: {
-            display: ['"Courier New"'],
-            body: ['"Courier New"']
+            display: ['"Montserrat"'],
+            body: ['"Montserrat"']
         },
         fontSize: {
             xs: '0.75rem',
