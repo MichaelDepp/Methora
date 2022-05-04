@@ -22,11 +22,11 @@ const Home = () => {
                 {/* Start Content Section */}
                 <ContentWrapper style={'max-w-sm text-center lg:text-left my-auto'}>
                     {/* Start First Animated Typing Section */}
-                    <p className={`pt-8 text-2xl font-bold lg:pt-0 ${textColorConfig}`}>
+                    <p className={`font-regular pt-8 text-2xl lg:pt-0 ${textColorConfig}`}>
                         <TypeIt
                             getBeforeInit={(instance) => {
                                 instance
-                                    .type('Hi there', { delay: 1000 })
+                                    .type('Hey there', { delay: 1000 })
                                     .pause(300)
                                     .type(' 👋', { delay: 200 })
                                     .pause(500);
@@ -56,23 +56,22 @@ const Home = () => {
                                     .move(null, { to: 'END', instant: true, delay: 300 })
                                     .pause(500)
                                     .delete()
-                                    .type("I'm an")
+                                    .type("I'm a")
                                     .pause(1000)
-                                    .type(
-                                        '<strong class="text-theme-primary"> UI Desingr</strong>',
-                                        { delay: 1000 }
-                                    )
+                                    .type('<strong class="text-theme-primary"> Travllr</strong>', {
+                                        delay: 1000
+                                    })
                                     .delete(3)
-                                    .type('<strong class="text-theme-primary">gner</strong>', {
+                                    .type('<strong class="text-theme-primary">eller</strong>', {
                                         delay: 400
                                     })
                                     .move(null, { to: 'END', instant: true, delay: 500 })
                                     .pause(1000)
-                                    .delete(14, { delay: 1000 })
+                                    .delete(11, { delay: 1000 })
                                     .type('a')
                                     .pause(800)
                                     .type(
-                                        '<strong class="text-theme-primary"> Developer</strong>',
+                                        '<strong class="text-theme-primary"> Photographer</strong>',
                                         {
                                             delay: 800
                                         }
@@ -84,7 +83,7 @@ const Home = () => {
                             }}
                         />
                     </p>
-                    {/* Start Second Animated Typing Section */}
+                    {/* End Second Animated Typing Section */}
 
                     {/* Start Description Section */}
                     <p className={`pt-4 text-base lg:mr-8 lg:text-lg ${textColorConfig}`}>
