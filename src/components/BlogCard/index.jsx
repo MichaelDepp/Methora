@@ -6,6 +6,10 @@ const BlogCard = ({ title, description, imageSrc, link, onClick }) => {
     const [isHovered, setHovered] = useState(false);
     const animation = useAnimation();
 
+    if (!title) {
+        return null;
+    }
+
     useEffect(() => {
         if (isHovered) {
             animation.start((i) => ({

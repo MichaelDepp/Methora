@@ -3,6 +3,11 @@ import Image from 'next/image';
 
 const PortfolioCard = ({ imageSrc, link, title }) => {
     const [isHovered, setHovered] = useState(false);
+
+    if (!title) {
+        return null;
+    }
+
     return (
         // Start Portfolio Card Section
         <a

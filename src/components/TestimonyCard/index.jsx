@@ -4,6 +4,10 @@ import { FaQuoteLeft } from 'react-icons/fa';
 import constants from '../../constants';
 
 const TestimonyCard = (props) => {
+    if (!props.image) {
+        return null;
+    }
+
     return (
         <div className="grid h-80 max-w-sm grid-rows-3 bg-gray-200 text-theme-bg dark:bg-theme-darkLight dark:text-theme-lightBg">
             {/* Start Testimony Section */}

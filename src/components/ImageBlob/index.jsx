@@ -2,6 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 
 const ImageBlob = (props) => {
+    if (!props.image) {
+        return null;
+    }
+
     return (
         // Start Background Blob Section
         <div className="h-56 w-56 animate-blob rounded-full bg-theme-primary shadow-2xl xs:h-64 xs:w-64 lg:h-96 lg:w-96">
