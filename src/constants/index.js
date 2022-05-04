@@ -3,7 +3,7 @@
 module.exports = {
     colors: {
         theme: {
-            primary: '#F5A8FA',
+            primary: '#EA623A',
             secondary: '#262626',
             bg: '#121315',
             lightBg: '#fefefe',
