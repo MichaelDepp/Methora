@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { FaQuoteLeft } from 'react-icons/fa';
 import constants from '../../constants';
 
@@ -14,10 +15,14 @@ const TestimonyCard = (props) => {
 
             {/* Start Reviewer Section */}
             <div className="row-span-1 grid grid-flow-col content-center justify-start gap-4 rounded-b-lg px-4">
-                <img
-                    className="h-14 w-14 rounded-full object-cover"
+                <Image
                     src={props.image}
                     alt="user image"
+                    layout="fixed"
+                    height={50}
+                    width={50}
+                    objectFit="cover"
+                    className="rounded-full"
                 />
                 <div className="my-auto">
                     <h3 className="text-md font-bold">{props.name}</h3>

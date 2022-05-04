@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const BlogPage = (props) => {
     return (
@@ -9,10 +10,15 @@ const BlogPage = (props) => {
             <h3 className="pt-2 text-xs font-normal line-clamp-1">
                 {'By Michael Doe / 20 April 2022'}
             </h3>
-            <img
-                src={props.imageSrc}
-                className="mt-4 h-44 w-full rounded-lg object-cover lg:mt-8 lg:h-96"
-            />
+            <div className="mt-4 h-44 w-full object-cover lg:mt-8 lg:h-96">
+                <Image
+                    src={props.imageSrc}
+                    alt={props.imageSrc}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-lg"
+                />
+            </div>
             <div className="py-4 text-justify lg:py-8">
                 {/* Sample article caption, You can pass this as a prop too. */}
                 <p>
