@@ -64,6 +64,7 @@ const Header = (props) => {
                         size={20}
                         toggled={isOpen}
                         toggle={setOpen}
+                        aria-label="close-open"
                     />
                 </div>
                 {/* End Hamburger Section */}
