@@ -14,11 +14,13 @@ const BlogPage = (props) => {
             <h4 className="pt-2 text-xs font-normal line-clamp-1">
                 {'By Michael Doe / 20 April 2022'}
             </h4>
-            <div className="mt-4 h-44 w-full object-cover lg:mt-8 lg:h-96">
+            <div className="mt-4 h-auto w-full object-cover lg:mt-8">
                 <Image
                     src={props.imageSrc}
                     alt={props.imageSrc}
-                    layout="fill"
+                    layout="responsive"
+                    height={9}
+                    width={16}
                     objectFit="cover"
                     className="rounded-lg"
                 />
