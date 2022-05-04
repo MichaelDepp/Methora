@@ -68,6 +68,10 @@ const Testimony = () => {
         }
     ];
 
+    if (!testimonyData) {
+        return null;
+    }
+
     const ArrowLeft = (props) => (
         <AiFillLeftCircle
             className={props.className}
