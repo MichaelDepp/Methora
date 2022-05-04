@@ -15,7 +15,7 @@ const Chip = (props) => {
             {/* Start Chip Title Section */}
             <div
                 className={`text-xs font-normal leading-none lg:text-sm ${
-                    props.selected && 'text-theme-bg'
+                    props.selected && 'text-theme-lightBg'
                 }`}>
                 {props.name}
             </div>
