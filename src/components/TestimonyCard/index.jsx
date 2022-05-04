@@ -25,7 +25,7 @@ const TestimonyCard = (props) => {
                     className="rounded-full"
                 />
                 <div className="my-auto">
-                    <h3 className="text-md font-bold">{props.name}</h3>
+                    <p className="text-md font-bold">{props.name}</p>
                     <p className="text-xs font-bold">{props.position}</p>
                 </div>
             </div>

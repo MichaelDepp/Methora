@@ -7,9 +7,9 @@ const BlogPage = (props) => {
             <h2 className="text-xl font-bold leading-none line-clamp-3 lg:text-4xl">
                 {props.title}
             </h2>
-            <h3 className="pt-2 text-xs font-normal line-clamp-1">
+            <h4 className="pt-2 text-xs font-normal line-clamp-1">
                 {'By Michael Doe / 20 April 2022'}
-            </h3>
+            </h4>
             <div className="mt-4 h-44 w-full object-cover lg:mt-8 lg:h-96">
                 <Image
                     src={props.imageSrc}
