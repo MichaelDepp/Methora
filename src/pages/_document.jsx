@@ -11,6 +11,7 @@ const Document = () => {
                 <link rel="apple-touch-icon" href="./assets/rocket-icon.png" />
                 <link rel="manifest" href="/manifest.json" />
                 <meta name="description" content="Methora Theme" />
+                <html lang="en"></html>
             </Head>
             {/* End Head Section */}
 
