@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { useAnimation, motion } from 'framer-motion';
 
 const BlogCard = ({ title, description, imageSrc, link, onClick }) => {
@@ -31,15 +32,19 @@ const BlogCard = ({ title, description, imageSrc, link, onClick }) => {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}>
             <div className="w-full overflow-hidden">
-                <motion.img
-                    animate={animation}
-                    src={imageSrc}
-                    className="h-64 w-full object-cover"
-                    alt={title}
-                />
+                <motion.div animate={animation} className="h-64 w-full">
+                    <Image
+                        src={imageSrc}
+                        alt={imageSrc}
+                        layout="responsive"
+                        height={80}
+                        width={60}
+                        objectFit="cover"
+                    />
+                </motion.div>
             </div>
             <div className={`px-5 py-3 leading-none lg:py-5 ${isHovered && textHoverConfig}`}>
-                <h3 className="mb-2 text-lg font-bold line-clamp-2 lg:mb-4 lg:text-xl">{title}</h3>
+                <h1 className="mb-2 text-lg font-bold line-clamp-2 lg:mb-4 lg:text-xl">{title}</h1>
                 <p className="mb-2 text-sm line-clamp-4">{description}</p>
             </div>
         </div>
