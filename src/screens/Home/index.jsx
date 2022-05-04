@@ -15,7 +15,7 @@ const Home = () => {
             <div className="grid h-full grid-flow-row content-center lg:grid-flow-col lg:justify-center lg:gap-24">
                 {/* Start Home Image Section */}
                 <div className="flex justify-center">
-                    <ImageBlob image={'/assets/memoji-home.png'} />
+                    <ImageBlob image={'/assets/home.jpeg'} />
                 </div>
                 {/* Start Home Image Section */}
 
