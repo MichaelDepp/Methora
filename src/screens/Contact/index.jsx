@@ -8,7 +8,7 @@ import HeaderTitle from 'components/HeaderTitle';
 import ImageBlob from 'components/ImageBlob';
 
 const Contact = () => {
-    const [width, setWidth] = useState(window.innerWidth);
+    const [width, setWidth] = useState(360);
     const { ref, inView } = useInView({
         threshold: 0.4
     });
@@ -41,6 +41,10 @@ const Contact = () => {
         }
     }, [inView]);
 
+    useEffect(() => {
+        setWidth(window.innerWidth);
+    }, []);
+
     // Function to get the screen width
     // Used to handle the responsiveness of the design in smaller devices
     useEffect(() => {
@@ -72,7 +76,7 @@ const Contact = () => {
                 <motion.div
                     animate={formAnimation}
                     className="text-center lg:row-end-1 lg:my-auto lg:text-left">
-                    <h3 className="text-xl font-bold text-theme-primary lg:text-3xl">{`Let's Talk`}</h3>
+                    <h1 className="text-xl font-bold text-theme-primary lg:text-3xl">{`Let's Talk`}</h1>
                     <p className="max-w-md pt-2 text-sm leading-4 text-theme-bg dark:text-theme-lightBg lg:text-base">
                         {
                             'To request a quote or want to meet up for coffee, contact us directly or fill out the form and I will get back to you promptly.'
