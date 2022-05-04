@@ -8,6 +8,7 @@ const ImageBlob = (props) => {
             <img
                 className="h-56 w-56 rounded-full object-contain xs:h-64 xs:w-64 lg:h-96 lg:w-96"
                 src={props.image}
+                alt={props.image}
             />
             {/* End Image Section */}
         </div>

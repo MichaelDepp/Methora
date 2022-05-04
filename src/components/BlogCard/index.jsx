@@ -23,16 +23,11 @@ const BlogCard = ({ title, description, imageSrc, link, onClick }) => {
     const textHoverConfig = 'text-theme-bg dark:text-theme-bg';
 
     return (
-        <a
+        <div
             className={`z-50 h-96 w-64 cursor-pointer overflow-hidden rounded-lg bg-gray-200 text-theme-bg shadow-sm
                 transition-colors duration-700 ease-in-out dark:bg-theme-darkLight dark:text-theme-lightBg lg:h-112 lg:w-80 ${bgColorConfig}
             `}
             onClick={onClick}
-            // If you want to open a link, you can just use the below method
-            // and pass the link to the href
-            // href={link}
-            // target="_blank"
-            // rel="noopener noreferrer"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}>
             <div className="w-full overflow-hidden">
@@ -47,7 +42,7 @@ const BlogCard = ({ title, description, imageSrc, link, onClick }) => {
                 <h3 className="mb-2 text-lg font-bold line-clamp-2 lg:mb-4 lg:text-xl">{title}</h3>
                 <p className="mb-2 text-sm line-clamp-4">{description}</p>
             </div>
-        </a>
+        </div>
     );
 };
 
