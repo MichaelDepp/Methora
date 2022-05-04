@@ -39,24 +39,24 @@ const Portfolio = () => {
         flutter: [
             {
                 title: 'Food delivery app',
-                imageSrc: '/./assets/portfolio/food-delivery-app.webp',
+                imageSrc: '/assets/portfolio/food-delivery-app.webp',
                 link: 'https://www.behance.net/gallery/115708047/Delivery-App?tracking_source=search_projects%7Cmobile%20app'
             },
             {
                 title: 'Uber app',
-                imageSrc: '/./assets/portfolio/uber-app.png',
+                imageSrc: '/assets/portfolio/uber-app.png',
                 link: 'https://www.behance.net/gallery/115708047/Delivery-App?tracking_source=search_projects%7Cmobile%20app'
             }
         ],
         uiDesign: [
             {
                 title: 'Ecom Sneakers',
-                imageSrc: '/./assets/portfolio/ecom-sneakers.png',
+                imageSrc: '/assets/portfolio/ecom-sneakers.png',
                 link: 'https://www.behance.net/gallery/115708047/Delivery-App?tracking_source=search_projects%7Cmobile%20app'
             },
             {
                 title: 'Music Application',
-                imageSrc: '/./assets/portfolio/music-application.png',
+                imageSrc: '/assets/portfolio/music-application.png',
                 link: 'https://www.behance.net/gallery/115708047/Delivery-App?tracking_source=search_projects%7Cmobile%20app'
             }
         ]

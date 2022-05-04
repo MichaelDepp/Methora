@@ -34,35 +34,35 @@ const Testimony = () => {
         {
             name: 'Emily Aviv',
             position: 'Mobile Engineer, Tesla',
-            image: '/./assets/testimony/emily-aviv.webp',
+            image: '/assets/testimony/emily-aviv.webp',
             testimony:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales ut nunc sed laoreet.'
         },
         {
             name: 'John Doe',
             position: 'Data Scientist, Boston',
-            image: '/./assets/testimony/john-doe.webp',
+            image: '/assets/testimony/john-doe.webp',
             testimony:
                 'Cras in mattis urna. Vestibulum  Sed maximus turpis vel massa tristique, quis sagittis lorem.'
         },
         {
             name: 'Deepika Singh',
             position: 'Solution Architect, Space X',
-            image: '/./assets/testimony/deepika-singh.jpeg',
+            image: '/assets/testimony/deepika-singh.jpeg',
             testimony:
                 'Aenean condimentum semper dictum. convallis dui vel lorem vestibulum commodo. Quisque rutrum, risus.'
         },
         {
             name: 'Peter Hill',
             position: 'QA Analyst, Pepsi',
-            image: '/./assets/testimony/peter-hill.webp',
+            image: '/assets/testimony/peter-hill.webp',
             testimony:
                 'In a volutpat dolor. Sed eget enim varius, volutpat nunc ut, hendrerit est. Vivamus vel erat auctor.'
         },
         {
             name: 'Nur Nazirah',
             position: 'Senior PO, Google',
-            image: '/./assets/testimony/nur-nazirah.webp',
+            image: '/assets/testimony/nur-nazirah.webp',
             testimony:
                 'Sed sit amet vulputate sem. In vel fringilla ipsum. Aenean sit amet tellus et felis blandit suscipit.'
         }

@@ -68,7 +68,7 @@ const Skills = () => {
                 <motion.div
                     animate={animation}
                     className="flex justify-center lg:items-center lg:justify-end">
-                    <ImageBlob image={'/./assets/memoji-skills.webp'} />
+                    <ImageBlob image={'/assets/memoji-skills.webp'} />
                 </motion.div>
                 {/* End Skills Image Section */}
 
