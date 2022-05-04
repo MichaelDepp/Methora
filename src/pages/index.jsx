@@ -42,7 +42,7 @@ const Index = () => {
     // This loding state can be used if you fetch data or get response from an api
     useEffect(() => {
         // We've added timeout time to 2 seconds
-        // setTimeout(() => setLoading(false), 0);
+        // setTimeout(() => setLoading(false), 2000);
         setLoading(false);
     }, []);
 
