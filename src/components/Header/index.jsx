@@ -44,7 +44,7 @@ const Header = (props) => {
 
     const closeBar = () => setOpen(false);
 
-    const pages = ['home', 'skills', 'projects', 'testimony', 'blog', 'contact'];
+    const pages = ['home', 'skills', 'portfolio', 'testimony', 'blog', 'contact'];
 
     const barOverlayConfig = barVisible
         ? 'transition-colors duration-500 ease-in lg:bg-theme-lightBg/90 dark:lg:bg-theme-bg/90'
