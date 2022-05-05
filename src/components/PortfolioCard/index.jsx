@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-const PortfolioCard = ({ imageSrc, link, title }) => {
+const PortfolioCard = ({ imageSrc, link, title, onClick }) => {
     const [isHovered, setHovered] = useState(false);
 
     if (!title) {
@@ -10,10 +10,8 @@ const PortfolioCard = ({ imageSrc, link, title }) => {
 
     return (
         // Start Portfolio Card Section
-        <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
+        <div
+            onClick={onClick}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}>
             {/* Start Hover Background Section */}
@@ -42,7 +40,7 @@ const PortfolioCard = ({ imageSrc, link, title }) => {
                 />
             </div>
             {/* End Card Image Section */}
-        </a>
+        </div>
         // End Portfolio Card Section
     );
 };
