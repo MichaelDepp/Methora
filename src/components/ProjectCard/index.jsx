@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-const PortfolioCard = ({ imageSrc, link, title }) => {
+const ProjectCard = ({ imageSrc, link, title }) => {
     const [isHovered, setHovered] = useState(false);
 
     if (!title) {
@@ -9,7 +9,7 @@ const PortfolioCard = ({ imageSrc, link, title }) => {
     }
 
     return (
-        // Start Portfolio Card Section
+        // Start Project Card Section
         <a
             href={link}
             target="_blank"
@@ -43,8 +43,8 @@ const PortfolioCard = ({ imageSrc, link, title }) => {
             </div>
             {/* End Card Image Section */}
         </a>
-        // End Portfolio Card Section
+        // End Project Card Section
     );
 };
 
-export default PortfolioCard;
+export default ProjectCard;

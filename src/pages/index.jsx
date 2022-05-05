@@ -8,7 +8,7 @@ import Contact from 'screens/Contact';
 import Home from 'screens/Home';
 import Skills from 'screens/Skills';
 import Testimony from 'screens/Testimony';
-import Portfolio from 'screens/Portfolio';
+import Projects from 'screens/Projects';
 
 // Component imports
 import Header from 'components/Header';
@@ -56,7 +56,7 @@ const Index = () => {
             setCurrentPage('skills');
         }
         if (inView3) {
-            setCurrentPage('portfolio');
+            setCurrentPage('projects');
         }
         if (inView4) {
             setCurrentPage('testimony');
@@ -94,11 +94,11 @@ const Index = () => {
                     </div>
                     {/* End Skills Section */}
 
-                    {/*Start Portfolio Section */}
+                    {/*Start Projects Section */}
                     <div ref={ref3}>
-                        <Portfolio />
+                        <Projects />
                     </div>
-                    {/* End Portfolio Section */}
+                    {/* End Projects Section */}
 
                     {/*Start Testimony Section */}
                     <div ref={ref4}>
