@@ -33,35 +33,35 @@ const Testimony = () => {
     const testimonyData = [
         {
             name: 'Emily Aviv',
-            position: 'Mobile Engineer, Tesla',
+            position: 'Chief Photographer, Sony',
             image: '/assets/testimony/emily-aviv.webp',
             testimony:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales ut nunc sed laoreet.'
         },
         {
             name: 'John Doe',
-            position: 'Data Scientist, Boston',
+            position: 'Costume Designer, Gucci',
             image: '/assets/testimony/john-doe.webp',
             testimony:
                 'Cras in mattis urna. Vestibulum  Sed maximus turpis vel massa tristique, quis sagittis lorem.'
         },
         {
             name: 'Deepika Singh',
-            position: 'Solution Architect, Space X',
+            position: 'Model, Shaine',
             image: '/assets/testimony/deepika-singh.jpeg',
             testimony:
                 'Aenean condimentum semper dictum. convallis dui vel lorem vestibulum commodo. Quisque rutrum, risus.'
         },
         {
             name: 'Peter Hill',
-            position: 'QA Analyst, Pepsi',
+            position: 'Editor, Pepsi',
             image: '/assets/testimony/peter-hill.webp',
             testimony:
                 'In a volutpat dolor. Sed eget enim varius, volutpat nunc ut, hendrerit est. Vivamus vel erat auctor.'
         },
         {
             name: 'Nur Nazirah',
-            position: 'Senior PO, Google',
+            position: 'Senior PO, Traveloka',
             image: '/assets/testimony/nur-nazirah.webp',
             testimony:
                 'Sed sit amet vulputate sem. In vel fringilla ipsum. Aenean sit amet tellus et felis blandit suscipit.'

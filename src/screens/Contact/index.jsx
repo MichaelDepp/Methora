@@ -79,7 +79,7 @@ const Contact = () => {
                     <h1 className="text-xl font-bold text-theme-primary lg:text-3xl">{`Let's Talk`}</h1>
                     <p className="max-w-md pt-2 text-sm leading-4 text-theme-bg dark:text-theme-lightBg lg:text-base">
                         {
-                            'To request a quote or want to meet up for coffee, contact us directly or fill out the form and I will get back to you promptly.'
+                            'To request a quote or want to meet up for coffee, contact me directly or fill out the form and I will get back to you promptly.'
                         }
                     </p>
                     <div className="pt-4">

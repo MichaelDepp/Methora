@@ -87,8 +87,8 @@ const Home = () => {
 
                     {/* Start Description Section */}
                     <p className={`pt-4 text-base lg:mr-8 lg:text-lg ${textColorConfig}`}>
-                        Tokyo based react/react native developer with over 5 years of experience in
-                        this field.
+                        Moscow based world traveller and photographer for the past 6 years. I am
+                        open for work worldwide.
                     </p>
                     {/* End Description Section */}
 

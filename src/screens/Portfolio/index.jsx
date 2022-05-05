@@ -4,10 +4,10 @@ import { useInView } from 'react-intersection-observer';
 
 import Container from 'components/Container';
 import HeaderTitle from 'components/HeaderTitle';
-import ProjectCard from 'components/ProjectCard';
+import PortfolioCard from 'components/PortfolioCard';
 import Chip from 'components/Chip';
 
-const Projects = () => {
+const Portfolio = () => {
     const [activeChip, setActiveChip] = useState('All');
     const [displayData, setDisplayData] = useState([]);
     const { ref, inView } = useInView();
@@ -31,52 +31,52 @@ const Projects = () => {
     }, [inView]);
 
     useEffect(() => {
-        setDisplayData([...projectsData.model, ...projectsData.nature]);
+        setDisplayData([...portfolioData.model, ...portfolioData.nature]);
     }, []);
 
     // Sample Portfolio Data
-    const projectsData = {
+    const portfolioData = {
         model: [
             {
                 title: 'Natalia Kira',
-                imageSrc: '/assets/projects/natalia-kira.webp',
+                imageSrc: '/assets/portfolio/natalia-kira.webp',
                 link: 'https://images.pexels.com/photos/4843594/pexels-photo-4843594.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
             },
             {
                 title: 'Елизавета Крючкина',
-                imageSrc: '/assets/projects/eлизавета-kрючкина.jpeg',
+                imageSrc: '/assets/portfolio/eлизавета-kрючкина.jpeg',
                 link: 'https://images.pexels.com/photos/9185072/pexels-photo-9185072.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
             },
             {
                 title: 'Erica Ogoliva',
-                imageSrc: '/assets/projects/erica-ogoliva.jpeg',
+                imageSrc: '/assets/portfolio/erica-ogoliva.jpeg',
                 link: 'https://images.pexels.com/photos/11919506/pexels-photo-11919506.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
             },
             {
                 title: 'Ms Mongolia',
-                imageSrc: '/assets/projects/ms-mongolia.jpeg',
+                imageSrc: '/assets/portfolio/ms-mongolia.jpeg',
                 link: 'https://images.pexels.com/photos/2460227/pexels-photo-2460227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
             }
         ],
         nature: [
             {
                 title: 'Bali Field',
-                imageSrc: '/assets/projects/bali-field.jpeg',
+                imageSrc: '/assets/portfolio/bali-field.jpeg',
                 link: 'https://images.pexels.com/photos/1743165/pexels-photo-1743165.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
             },
             {
                 title: 'Vietnam Forest',
-                imageSrc: '/assets/projects/vietnam-forest.jpeg',
+                imageSrc: '/assets/portfolio/vietnam-forest.jpeg',
                 link: 'https://images.pexels.com/photos/1657972/pexels-photo-1657972.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
             },
             {
                 title: 'Maldives Beach',
-                imageSrc: '/assets/projects/maldives-beach.jpeg',
+                imageSrc: '/assets/portfolio/maldives-beach.jpeg',
                 link: 'https://images.pexels.com/photos/3229454/pexels-photo-3229454.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
             },
             {
                 title: 'Iceland Mountain',
-                imageSrc: '/assets/projects/iceland-mountain.jpeg',
+                imageSrc: '/assets/portfolio/iceland-mountain.jpeg',
                 link: 'https://images.pexels.com/photos/3837615/pexels-photo-3837615.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
             }
         ]
@@ -93,24 +93,24 @@ const Projects = () => {
         });
         switch (name) {
             case 'All':
-                setDisplayData([...projectsData.model, ...projectsData.nature]);
+                setDisplayData([...portfolioData.model, ...portfolioData.nature]);
                 break;
             case 'Model':
-                setDisplayData(projectsData.model);
+                setDisplayData(portfolioData.model);
                 break;
             case 'Nature':
-                setDisplayData(projectsData.nature);
+                setDisplayData(portfolioData.nature);
                 break;
             default:
-                setDisplayData([projectsData.model, projectsData.nature]);
+                setDisplayData([portfolioData.model, portfolioData.nature]);
         }
     };
 
     return (
-        <Container id="projects" fullScreen={false}>
+        <Container id="portfolio" fullScreen={false}>
             {/* Start Title Section */}
             <div className="pt-8">
-                <HeaderTitle title={'Projects'} />
+                <HeaderTitle title={'Portfolio'} />
             </div>
             {/* End Title Section */}
 
@@ -122,18 +122,18 @@ const Projects = () => {
             </div>
             {/* End Chips Section */}
 
-            {/* Start Project Cards Section */}
+            {/* Start Portfolio Cards Section */}
             <motion.div
                 ref={ref}
                 animate={animation}
                 className="grid grid-rows-1 justify-items-center gap-4 py-12 lg:grid-cols-3 lg:gap-8 lg:py-16">
                 {displayData.map((data, key) => {
-                    return <ProjectCard key={key} {...data} />;
+                    return <PortfolioCard key={key} {...data} />;
                 })}
             </motion.div>
-            {/* End Project Cards Section */}
+            {/* End Portfolio Cards Section */}
         </Container>
     );
 };
 
-export default Projects;
+export default Portfolio;

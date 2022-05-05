@@ -2,7 +2,7 @@ import React from 'react';
 import {
     AiOutlineTwitter,
     AiOutlineDribbble,
-    AiOutlineGithub,
+    AiOutlineInstagram,
     AiFillLinkedin
 } from 'react-icons/ai';
 
@@ -17,10 +17,10 @@ const SocialLink = () => {
                 className={iconStyle}
                 onClick={() => window.open('https://twitter.com/NASA')}
             />
-            <AiOutlineGithub
+            <AiOutlineInstagram
                 size={18}
                 className={iconStyle}
-                onClick={() => window.open('https://github.com/nasa')}
+                onClick={() => window.open('https://instagram.com/nasa')}
             />
             <AiFillLinkedin
                 size={18}
