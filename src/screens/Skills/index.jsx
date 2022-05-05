@@ -32,24 +32,24 @@ const Skills = () => {
     // Sample Skills Data
     const skillsData = [
         {
-            name: 'Flutter',
+            name: 'Fashion Photography',
             percentage: 95
         },
         {
-            name: 'React Native',
+            name: 'Architectural Photography',
             percentage: 90
         },
         {
-            name: 'Machine Learning',
+            name: 'Potrait Photography',
             percentage: 45
         },
         {
-            name: 'Python',
-            percentage: 85
+            name: 'Product Photography',
+            percentage: 90
         },
         {
-            name: 'Ui Design',
-            percentage: 90
+            name: 'Creative Editing',
+            percentage: 85
         }
     ];
 
