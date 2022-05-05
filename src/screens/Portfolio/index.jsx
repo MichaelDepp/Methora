@@ -6,10 +6,13 @@ import Container from 'components/Container';
 import HeaderTitle from 'components/HeaderTitle';
 import PortfolioCard from 'components/PortfolioCard';
 import Chip from 'components/Chip';
+import Modal from 'components/Modal';
 
 const Portfolio = () => {
     const [activeChip, setActiveChip] = useState('All');
     const [displayData, setDisplayData] = useState([]);
+    const [isOpen, setIsOpen] = useState(false);
+    const [selectedImage, setSelectedImage] = useState('');
     const { ref, inView } = useInView();
     const animation = useAnimation();
 
@@ -106,6 +109,16 @@ const Portfolio = () => {
         }
     };
 
+    // Function when blog is clicked
+    // This will trigger the modal and display the image
+    const onClickCard = (data) => {
+        setSelectedImage(data?.imageSrc);
+        setIsOpen(true);
+    };
+
+    // Function to close the modal
+    const onCloseModal = () => setIsOpen(false);
+
     return (
         <Container id="portfolio" fullScreen={false}>
             {/* Start Title Section */}
@@ -128,10 +141,22 @@ const Portfolio = () => {
                 animate={animation}
                 className="grid grid-rows-1 justify-items-center gap-4 py-12 lg:grid-cols-3 lg:gap-8 lg:py-16">
                 {displayData.map((data, key) => {
-                    return <PortfolioCard key={key} {...data} />;
+                    return <PortfolioCard key={key} {...data} onClick={() => onClickCard(data)} />;
                 })}
             </motion.div>
             {/* End Portfolio Cards Section */}
+
+            {/* Start Blog Modal Section */}
+            {selectedImage && (
+                <Modal isOpen={isOpen} closeModal={onCloseModal}>
+                    <img
+                        src={selectedImage}
+                        alt={selectedImage}
+                        className="object-contain lg:h-full"
+                    />
+                </Modal>
+            )}
+            {/* End Blog Modal Section */}
         </Container>
     );
 };
