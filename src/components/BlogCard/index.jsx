@@ -36,7 +36,7 @@ const BlogCard = ({ title, description, imageSrc, link, onClick }) => {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}>
             <div className="w-full overflow-hidden">
-                <motion.div animate={animation} className="h-64 w-full">
+                <motion.div animate={animation} className="h-60 w-full">
                     <Image
                         src={imageSrc}
                         alt={imageSrc}
@@ -47,9 +47,13 @@ const BlogCard = ({ title, description, imageSrc, link, onClick }) => {
                     />
                 </motion.div>
             </div>
-            <div className={`px-5 py-3 leading-none lg:py-5 ${isHovered && textHoverConfig}`}>
-                <h1 className="mb-2 text-lg font-bold line-clamp-2 lg:mb-4 lg:text-xl">{title}</h1>
-                <p className="mb-2 text-sm line-clamp-4">{description}</p>
+            <div className={`px-5 py-3 lg:py-5 ${isHovered && textHoverConfig}`}>
+                <h1 className="mb-1 text-lg font-semibold leading-6 line-clamp-2 lg:mb-4 lg:text-xl">
+                    {title}
+                </h1>
+                <p className="mb-2 text-sm font-normal leading-4 line-clamp-4 lg:text-base lg:leading-5">
+                    {description}
+                </p>
             </div>
         </div>
     );

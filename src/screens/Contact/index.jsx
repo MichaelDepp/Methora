@@ -76,8 +76,8 @@ const Contact = () => {
                 <motion.div
                     animate={formAnimation}
                     className="text-center lg:row-end-1 lg:my-auto lg:text-left">
-                    <h1 className="text-xl font-bold text-theme-primary lg:text-3xl">{`Let's Talk`}</h1>
-                    <p className="max-w-md pt-2 text-sm leading-4 text-theme-bg dark:text-theme-lightBg lg:text-base">
+                    <h1 className="text-xl font-semibold tracking-wider text-theme-primary lg:text-3xl">{`Let's Talk`}</h1>
+                    <p className="max-w-md pt-2 text-sm font-light leading-5 text-theme-bg dark:text-theme-lightBg lg:text-base">
                         {
                             'To request a quote or want to meet up for coffee, contact me directly or fill out the form and I will get back to you promptly.'
                         }

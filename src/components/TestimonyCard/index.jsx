@@ -13,7 +13,9 @@ const TestimonyCard = (props) => {
             {/* Start Testimony Section */}
             <div className="row-span-2 grid content-around rounded-t-lg px-4">
                 <FaQuoteLeft size={38} color={constants.colors.theme.primary} />
-                <p className="text-lg font-bold line-clamp-4 lg:text-xl">{props.testimony}</p>
+                <p className="text-lg font-normal tracking-wide line-clamp-4 lg:text-xl">
+                    {props.testimony}
+                </p>
             </div>
             {/* End Testimony Section */}
 
@@ -29,8 +31,8 @@ const TestimonyCard = (props) => {
                     className="rounded-full"
                 />
                 <div className="my-auto">
-                    <p className="text-md font-bold">{props.name}</p>
-                    <p className="text-xs font-bold">{props.position}</p>
+                    <p className="text-md font-semibold">{props.name}</p>
+                    <p className="text-xs font-normal">{props.position}</p>
                 </div>
             </div>
             {/* End Reviewer Section */}

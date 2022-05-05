@@ -22,7 +22,7 @@ const Home = () => {
                 {/* Start Content Section */}
                 <ContentWrapper style={'max-w-sm text-center lg:text-left my-auto'}>
                     {/* Start First Animated Typing Section */}
-                    <p className={`font-regular pt-8 text-2xl lg:pt-0 ${textColorConfig}`}>
+                    <p className={`pt-8 text-2xl font-light lg:pt-0 ${textColorConfig}`}>
                         <TypeIt
                             getBeforeInit={(instance) => {
                                 instance
@@ -44,7 +44,8 @@ const Home = () => {
                     {/* End First Animated Typing Section */}
 
                     {/* Start Second Animated Typing Section */}
-                    <p className={`pt-4 text-3xl font-bold xl:text-4xl ${textColorConfig}`}>
+                    <p
+                        className={`pt-2 text-3xl font-medium lg:pt-4 xl:text-4xl ${textColorConfig}`}>
                         <TypeIt
                             getBeforeInit={(instance) => {
                                 instance

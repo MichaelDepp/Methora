@@ -4,7 +4,7 @@ const HeaderTitle = ({ title }) => {
     return (
         <div className="relative overflow-hidden text-center">
             {/* Start Primary Title Section */}
-            <h1 className="absolute right-0 left-0 top-2.5 z-10 text-center text-3xl font-bold text-theme-primary lg:top-3 lg:text-5xl">
+            <h1 className="absolute right-0 left-0 top-2.5 z-10 text-center text-3xl font-semibold tracking-widest text-theme-primary lg:top-4 lg:text-5xl">
                 {title}
             </h1>
             {/* End Primary Title Section */}

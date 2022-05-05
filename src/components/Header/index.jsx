@@ -78,7 +78,7 @@ const Header = (props) => {
                             <Link key={key} href={`#${page.toLowerCase()}`}>
                                 <p
                                     onClick={() => props.setCurrentPage(page)}
-                                    className={`${colorCofig} cursor-pointer text-lg font-bold
+                                    className={`${colorCofig} cursor-pointer text-lg font-semibold tracking-widest
                                     hover:text-theme-primary dark:hover:text-theme-primary`}>
                                     {upperFirst(page)}
                                 </p>
