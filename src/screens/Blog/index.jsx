@@ -34,28 +34,28 @@ const Blog = () => {
     // Sample Blog Data
     const blogData = [
         {
-            title: 'How many programming languages do you regularly switch between?',
+            title: 'How many camera lenses do you regularly switch between?',
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer efficitur, mauris eget rutrum maximus, enim dui interdum',
             imageSrc: '/assets/blog/blog-1.webp',
             link: 'https://dev.to/david_ojeda/road-to-aws-certification-2438'
         },
         {
-            title: 'How to Be a 10x Software Engineer',
+            title: 'How to Be a 10x Fashion Photgrapher',
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer efficitur, mauris eget rutrum maximus, enim dui interdum',
             imageSrc: '/assets/blog/blog-2.webp',
             link: 'https://dev.to/david_ojeda/road-to-aws-certification-2438'
         },
         {
-            title: '💪Become a Front-end Master using these awesome tools 🖱',
+            title: '💪Become a Creative Editing Master using these awesome tools 🖱',
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer efficitur, mauris eget rutrum maximus, enim dui interdum',
             imageSrc: '/assets/blog/blog-3.webp',
             link: 'https://dev.to/david_ojeda/road-to-aws-certification-2438'
         },
         {
-            title: '4 Core things to always do when cleaning your data for predictive models.',
+            title: '4 Core things to always do when you scouting for location.',
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer efficitur, mauris eget rutrum maximus, enim dui interdum',
             imageSrc: '/assets/blog/blog-4.webp',
