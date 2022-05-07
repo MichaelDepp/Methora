@@ -152,6 +152,7 @@ const Portfolio = () => {
                     <img
                         src={`.${selectedImage}`}
                         alt={selectedImage}
+                        loading="eager"
                         className="object-contain lg:h-full"
                     />
                 </Modal>
