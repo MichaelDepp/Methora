@@ -150,7 +150,7 @@ const Portfolio = () => {
             {selectedImage && (
                 <Modal isOpen={isOpen} closeModal={onCloseModal}>
                     <img
-                        src={selectedImage}
+                        src={`.${selectedImage}`}
                         alt={selectedImage}
                         className="object-contain lg:h-full"
                     />
