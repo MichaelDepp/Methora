@@ -58,13 +58,15 @@ const Header = (props) => {
                 onMouseLeave={() => setBarHover(false)}
                 className={`fixed top-0 z-40 flex w-full flex-wrap items-center justify-between ${barOverlayConfig}`}>
                 {/* Start Hamburger Section */}
-                <Hamburger
-                    color={constants.colors.theme.primary}
-                    size={20}
-                    toggled={isOpen}
-                    toggle={setOpen}
-                    label={'menu-button'}
-                />
+                <div className="lg:invisible">
+                    <Hamburger
+                        color={constants.colors.theme.primary}
+                        size={20}
+                        toggled={isOpen}
+                        toggle={setOpen}
+                        label={'menu-button'}
+                    />
+                </div>
                 {/* End Hamburger Section */}
 
                 {/* Start Header Page Link Section */}
